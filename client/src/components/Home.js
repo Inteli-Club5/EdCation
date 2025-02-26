@@ -37,27 +37,27 @@ class Home extends Component {
                         <div className="track-card">
                             <img src={arbitrum} className="track-icon"></img>
                             <p className="track-name">Arbitrum</p>
-                            <p className="access-link hire">Contrate</p>
+                            <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
                             <img src={chainlink} className="track-icon"></img>
                             <p className="track-name">Chainlink</p>
-                            <p className="access-link hire">Contrate</p>
+                            <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
                             <img src={bitcoin} className="track-icon"></img>
                             <p className="track-name">Bitcoin</p>
-                            <p className="access-link hire">Contrate</p>
+                            <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
                             <img src={ethereum} className="track-icon"></img>
                             <p className="track-name">Ethereum</p>
-                            <p className="access-link hire">Contrate</p>
+                            <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
                             <img src={scroll} className="track-icon"></img>
                             <p className="track-name">Scroll</p>
-                            <p className="access-link hire">Contrate</p>
+                            <p className="access-link access">Acesse</p>
                         </div>
                     </div>
                 </div>

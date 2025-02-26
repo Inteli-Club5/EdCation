@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import logo from './images/edcation3.png';
 
 class Login extends Component {
     render() {
@@ -17,7 +16,7 @@ class Login extends Component {
                             <Link to="/criar-conta" >
                                 <button className='botao-login'>Criar Conta</button>
                             </Link>
-                            <Link to="/home">
+                            <Link to="/escolha">
                                 <button className='botao-login'>Entrar</button>
                             </Link>
                         </div> 

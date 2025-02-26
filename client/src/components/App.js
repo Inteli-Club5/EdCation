@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Login from './Login';
+import Home from './Home';
+import CriarConta from './Criar-Conta';
 
 class App extends Component {
     render() {
@@ -9,6 +11,8 @@ class App extends Component {
                 <div>
                     <Routes>
                         <Route path="/" element={<Login/>}/>
+                        <Route path="/home" element={<Home/>}/>
+                        <Route path="/criar-conta" element={<CriarConta/>}/>
                     </Routes>
                 </div>
             </div>

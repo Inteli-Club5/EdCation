@@ -1,4 +1,3 @@
-/* CSS (Login.css) */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 html, body {
@@ -15,7 +14,7 @@ html, body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('https://www.crypto-finance.com/wp-content/uploads/iStock-1215603381-scaled.jpg');
+    background-image: url('https://www.linx.com.br/app/uploads/2022/08/shutterstock_1723989400.jpg');
     background-size: cover;
     background-position: center;
     justify-content: flex-end;
@@ -68,16 +67,27 @@ html, body {
 .senhaText {
     margin-top: 1rem;
     font-size: 14px;
-    color: #3498db;
+    color: #db3f34;
     text-decoration: none;
 }
 
 .senhaText:hover {
-    text-decoration: underline;
+    color: #b5372e;
+    text-decoration: none;
 }
 
+/* Ajuste para botões ficarem lado a lado */
 .container-botoes {
     width: 100%;
+    display: flex;
+    flex-direction: row; /* Alinha os botões na horizontal */
+    gap: 1rem; /* Espaçamento entre os botões */
+    justify-content: center; /* Centraliza os botões */
+}
+
+.container-botoes a {
+    flex: 1; /* Faz o link (e o botão) ocupar o mesmo espaço */
+    text-decoration: none;
 }
 
 .botao-login {
@@ -90,7 +100,9 @@ html, body {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
 }
+
 
 .botao-login:hover {
     background-color: #2980b9;

@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
 import CriarConta from './Criar-Conta';
+import Conta from './Conta';
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                         <Route path="/" element={<Login/>}/>
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/criar-conta" element={<CriarConta/>}/>
+                        <Route path="/conta" element={<Conta/>}/>
                     </Routes>
                 </div>
             </div>

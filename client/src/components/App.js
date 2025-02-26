@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
+import Login from './Login';
 
 class App extends Component {
     render() {
@@ -8,7 +8,7 @@ class App extends Component {
             <div>
                 <div>
                     <Routes>
-                        <Route path="/" element={<Home/>}/>
+                        <Route path="/" element={<Login/>}/>
                     </Routes>
                 </div>
             </div>

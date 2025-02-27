@@ -334,3 +334,45 @@ html, body {
     width: 80px;
     height: 80px;
 }
+.content-perfil{
+    margin-top: 2%;
+}
+/* Perfil */
+.content-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.profile-detail {
+    font-size: 16px;
+    color: #555;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Botão de Logout */
+.logout-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.logout-container button {
+    background-color: #e4e2e2;
+    color: rgb(245, 4, 4);
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.logout-container button:hover {
+    background-color: #f80303;
+    color: white;
+    transform: scale(1.03);
+}

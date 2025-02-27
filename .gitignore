@@ -5,3 +5,6 @@ client/dist/
 /certificado-nft/target
 /certificado-nft/.env
 /certificado-nft/.env.example
+/token-smd/target
+/token-smd/.env
+/token-smd/.env.example

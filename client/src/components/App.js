@@ -7,6 +7,7 @@ import Conta from './Conta';
 import Escolha from './Escolha';
 import Quiz from './Quiz';
 import Lessons from './Teorico';
+import Assinatura from './Assinatura';
 
 class App extends Component {
     render() {
@@ -21,6 +22,8 @@ class App extends Component {
                         <Route path="/conta" element={<Conta/>}/>
                         <Route path="/quiz" element={<Quiz/>}/>
                         <Route path="/licoes" element={<Lessons/>}/>
+                        <Route path="/assinatura" element={<Assinatura/>}/>
+
                     </Routes>
                 </div>
             </div>

@@ -68,6 +68,14 @@ const Home = () => {
         { name: "Scroll", image: scroll, width: 0 }
     ];
 
+    const ranking = [
+        {position: 1, name: "Alice", tokens: 150},
+        {position: 2, name: "Pedro", tokens: 110},
+        {position: 3, name: "João", tokens: 85},
+        {position: 4, name: "Thiago", tokens: 70},
+        {position: 5, name: "Victor", tokens: 65},
+    ]
+
     const trackDescriptions = {
         "ARB": "Arbitrum é uma solução de escalabilidade de segunda camada para Ethereum, que melhora a velocidade e reduz taxas de transação.",
         "Wallet": "Uma carteira digital permite armazenar, enviar e receber criptomoedas com segurança.",
@@ -114,6 +122,10 @@ const Home = () => {
                 </div>
             </div>
             <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={` ${selectedTrack}`} trackImage={trackImage} description={trackDescription} />
+            <div className="content-container">
+                <h1 className="title">Ranking</h1>
+                <hr className="horizontal-line" />
+            </div>
         </div>
     );
 };

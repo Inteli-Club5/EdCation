@@ -690,7 +690,8 @@ html, body {
 }
 .containerHome{
     background-image: url('./components/images/backgrounds/Tracks.png');
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 .ajusteMeio{
     width: 90%;

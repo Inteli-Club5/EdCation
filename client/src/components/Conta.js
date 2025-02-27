@@ -31,7 +31,7 @@ class Conta extends Component {
                         <div className="track-card">
                             <img src={certificado} className="track-icon-2" alt="Certificado" />
                             <p className="track-name">Certificado #1</p>
-                            <p className="access-link access-2">Blockchain</p>
+                            <p className="access-link access-2">Arbitrum</p>
                         </div>
                     </div>
                 </div>

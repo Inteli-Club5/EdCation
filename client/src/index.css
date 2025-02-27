@@ -2056,20 +2056,36 @@ html, body {
     align-items: center;
     width: 20%;
 }
-.logo-container2{
-    flex-direction: row;
+
+.logo-container2 {
     display: flex;
+    width: 100%; /* Certifique-se de que ocupa toda a largura disponível */
+    margin-right: 30vh;
     text-decoration: none;
 }
+
 .titulo4 {
-    text-align: left;
     font-weight: bold;
     font-size: 1.5em;
     color: #fdfdfd;
     margin-bottom: 1em;
-    
+    text-decoration: none;
 }
-.titulo4:hover{
+
+.titulo4 a {
+    text-decoration: none; /* Garante que o link não tenha underline */
+}
+
+.titulo4:hover {
     transition: 0.5s;
-    font-size: 1.55em;
+    color:rgb(210, 199, 199);
+    text-decoration: none; /* Garante que o hover também não tenha underline */
+}
+
+.no-effect {
+    text-decoration: none;
+}
+
+.no-effect:hover {
+    text-decoration: none;
 }

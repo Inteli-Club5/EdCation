@@ -101,11 +101,13 @@ const Home = () => {
                         <img src={logo} alt="Logo" className="logo" />
                     </Link>
                 </div>
-                <div className="logo-container2">
-                    <Link to="/escolha">
-                        <h1 className='titulo4'>Tracks</h1>
-                    </Link>
+                <center>
+                    <div className="logo-container2">
+                        <Link class="no-effect" to="/escolha">
+                            <h1 className='titulo4'>Tracks</h1>
+                        </Link>
                     </div>
+                </center>
                 <div className="profile-container">
                     <Link to="/conta">
                         <img src={profile} alt="Conta" className="profile-image" />
@@ -113,7 +115,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="content-container">
-                <h1 className="title">Tracks {escolha === "Finanças" ? "Financeiras" : "de Programação"}</h1>
+                <h1 className="title">{escolha === "Finanças" ? "Finanças" : "Programação"}</h1>
                 <hr className="horizontal-line" />
                 <div className="tracks-container">
                     {tracks.map((track, index) => (

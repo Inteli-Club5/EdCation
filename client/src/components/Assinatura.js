@@ -18,34 +18,51 @@ class Assinatura extends Component {
 
                 console.log("Conectado com a conta:", accounts[0]);
 
-                // Verifica se está na rede Arbitrum Sepolia
+                // Verifica se está na rede Arbitrum Sepolia
                 const network = await provider.getNetwork();
                 if (network.chainId !== 421614) {  // ID da Arbitrum Sepolia
-                    await window.ethereum.request({
-                        method: "wallet_switchEthereumChain",
-                        params: [{ chainId: "0x66eee" }], // 0x66eee é a Arbitrum Sepolia
-                    });
+                    try {
+                        // Adiciona a rede Arbitrum Sepolia ao MetaMask
+                        await window.ethereum.request({
+                            method: "wallet_addEthereumChain",
+                            params: [{
+                                chainId: "0x66eee", // ID da Arbitrum Sepolia
+                                chainName: "Arbitrum Sepolia",
+                                nativeCurrency: {
+                                    name: "ETH",
+                                    symbol: "ETH",
+                                    decimals: 18
+                                },
+                               rpcUrls: ["https://sepolia-rollup.arbitrum.io/rpc"],
+                                blockExplorerUrls: ["https://explorer.arbitrum.io/"],
+                            }]
+                        });
+                    } catch (addError) {
+                        console.error("Erro ao adicionar a rede Arbitrum Sepolia:", addError);
+                        alert("Erro ao adicionar a rede Arbitrum Sepolia. Tente novamente.");
+                        return;
+                    }
                 }
 
-                // Criar e enviar a transação
+                // Criar e enviar a transação
                 const tx = await signer.sendTransaction({
                     to: "0x7d2e47076043786803b2258511359C3C198c3b73",  // Substitua pelo contrato real
                     value: parseEther("0.0001"), 
                 });
 
-                console.log("Transação enviada! Hash:", tx.hash);
+                console.log("Transação enviada! Hash:", tx.hash);
 
                 const receipt = await tx.wait(); 
                 if (receipt.status === 1) {
                     window.location.href = '/home';
                 } else {
-                    alert("Falha na transação.");
+                    alert("Falha na transação.");
                 }
             } catch (error) {
                 console.error("Erro ao conectar ou transacionar:", error);
             }
         } else {
-            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
+            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
         }
     };
 
@@ -75,11 +92,13 @@ class Assinatura extends Component {
                                 <img src={onchain} className="track-icon2" alt="onchain"/>
                                 <br/>
                                 <p className="track-name">OnChain</p>
+                                <p className="track-name">ETH 0,001</p>
                             </div>
                             <div className="track-card">
                                 <img src={pix} className="track-icon2" alt="pix"/>
                                 <br/>
                                 <p className="track-name">PIX</p>
+                                <p className="track-name">R$ 150,00</p>
                             </div>
                         </div>
                     </center>

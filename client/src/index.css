@@ -257,14 +257,7 @@ html, body {
     background-color: #d6d4d4;
 }
 
-.menu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    background-color: #1F1F1F;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 .white{
     color: white;
 }
@@ -2053,4 +2046,30 @@ html, body {
     padding: 3em;
     margin-bottom: 2%;
     
+}
+.logo2 {
+    height: 25px;
+}
+.logo-container{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+.logo-container2{
+    flex-direction: row;
+    display: flex;
+    text-decoration: none;
+}
+.titulo4 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fdfdfd;
+    margin-bottom: 1em;
+    
+}
+.titulo4:hover{
+    transition: 0.5s;
+    font-size: 1.55em;
 }

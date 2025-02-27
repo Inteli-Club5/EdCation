@@ -12,6 +12,7 @@ import ethereum from './images/ethereum.png';
 import scroll from './images/scroll.png';
 import avatar from './images/avatar.png';
 import tokensImg from './images/tokens.png';
+import voltar from './images/voltar.png';
 
 import { getEscolhaUsuario } from './Escolha';
 
@@ -100,6 +101,11 @@ const Home = () => {
                         <img src={logo} alt="Logo" className="logo" />
                     </Link>
                 </div>
+                <div className="logo-container2">
+                    <Link to="/escolha">
+                        <h1 className='titulo4'>Tracks</h1>
+                    </Link>
+                    </div>
                 <div className="profile-container">
                     <Link to="/conta">
                         <img src={profile} alt="Conta" className="profile-image" />

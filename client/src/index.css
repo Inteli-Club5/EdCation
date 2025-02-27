@@ -281,6 +281,12 @@ html, body {
     margin-top: 8px;
     font-weight: bold;
 }
+
+.centraliza {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
 .progress-bar-container {
     width: 80%;
     height: 6px;
@@ -597,6 +603,16 @@ html, body {
     text-align: justify;
     margin-top: 5%;
 }
+
+.texto-center {
+    color: white;
+    font-size: 16px;
+    font-family: Raleway;
+    text-align: justify;
+    margin-top: 5%;
+    align-items: center;
+}
+
 .tituloModal2{
     color: white;
 }

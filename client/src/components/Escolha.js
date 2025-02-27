@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import programacaoImg from './images/programacao.png';
-import financasImg from './images/Etherium-3.png';
+import financasImg from './images/finance.png';
 
 // Variável para armazenar a escolha do usuário
 let escolhaUsuario = "";

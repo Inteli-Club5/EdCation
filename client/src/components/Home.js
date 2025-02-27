@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from './images/edcation3.png';
 import profile from './images/profile.png';
 import blockchain from './images/blockchain.png';
-import layer2 from './images/Layer2.png';
 import chainlink from './images/chainlink.png';
 import bitcoin from './images/bitcoin.png';
 import DeFi from './images/DeFi.png';
@@ -104,7 +103,7 @@ const Home = () => {
                 <div className="tracks-container">
                     {tracks.map((track, index) => (
                         <div key={index} className="track-card" onClick={() => openModal(track.name, track.image)}>
-                            <img src={track.image} className={track.name === "DeFi" ? "track-icon2" : "track-icon"}  alt={track.name} />
+                            <img src={track.image} className={track.name === "DeFi" || "Blockchain" ? "track-icon2" : "track-icon"}  alt={track.name} />
                             <p className="track-name">{track.name}</p>
                             <p className="access-link access">Acesse</p>
                             <div className="progress-bar-container">

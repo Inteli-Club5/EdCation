@@ -24,6 +24,11 @@ class Home extends Component {
                     <hr className="horizontal-line" />
                     <div className="tracks-container">
                         <div className="track-card">
+                            <img src={arbitrum} className="track-icon"></img>
+                            <p className="track-name">ARB</p>
+                            <p className="access-link access">Acesse</p>
+                        </div>
+                        <div className="track-card">
                             <img src={metamask} className="track-icon"></img>
                             <p className="track-name">Wallet</p>
                             <p className="access-link access">Acesse</p>
@@ -36,11 +41,6 @@ class Home extends Component {
                         <div className="track-card">
                             <img src={layer2} className="track-icon"></img>
                             <p className="track-name">Layer 2</p>
-                            <p className="access-link access">Acesse</p>
-                        </div>
-                        <div className="track-card">
-                            <img src={chainlink} className="track-icon"></img>
-                            <p className="track-name">LINK</p>
                             <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
@@ -63,13 +63,13 @@ class Home extends Component {
                     <hr className="horizontal-line" />
                     <div className="tracks-container">
                         <div className="track-card">
-                            <img src={blockchain} className="track-icon"></img>
-                            <p className="track-name">Blockchain</p>
+                            <img src={arbitrum} className="track-icon"></img>
+                            <p className="track-name">Arbitrum</p>
                             <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">
-                            <img src={arbitrum} className="track-icon"></img>
-                            <p className="track-name">Arbitrum</p>
+                            <img src={blockchain} className="track-icon"></img>
+                            <p className="track-name">Blockchain</p>
                             <p className="access-link access">Acesse</p>
                         </div>
                         <div className="track-card">

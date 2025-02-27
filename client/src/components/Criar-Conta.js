@@ -18,7 +18,7 @@ class CriarConta extends Component {
                             <Link className='senhaText' to="/">Já Possuo Conta</Link>
                         </div>
                         <div className='container-botoes'>
-                            <Link to="/home">
+                            <Link to="/escolha">
                                 <button className='botao-login'>Entrar</button>
                             </Link>
                         </div>

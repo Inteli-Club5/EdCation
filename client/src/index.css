@@ -150,6 +150,11 @@ html, body {
     border-radius: 50%;
 }
 
+.track-icon2 {
+    width: 80px;
+    height: 80px;
+}
+
 .tracks-container {
     display: flex;
     gap: 24px;
@@ -185,6 +190,11 @@ html, body {
     color: #333;
 }
 
+.track-name-2 {
+    font-size: 20px;
+    color: #FFD700;
+}
+
 .access-link {
     font-size: 16px;
     margin-top: 8px;
@@ -193,6 +203,10 @@ html, body {
 
 .access {
     color: green;
+}
+
+.access-2 {
+    color: #FFD700;
 }
 
 .hire {
@@ -314,4 +328,9 @@ html, body {
 .cards-container a {
     text-decoration: none;
     color: inherit;
+}
+
+.track-icon-2 {
+    width: 80px;
+    height: 80px;
 }

@@ -766,15 +766,6 @@ html, body {
 .lightgreen{
     color: rgb(148, 244, 4);
 }
-/* App.css */
-.quiz-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90vh;
-    padding: 20px;
-    text-align: center;
-}
 
 .question-container {
     flex: 1;
@@ -1031,7 +1022,6 @@ html, body {
     background-image: url('./components/images/backgrounds/FundoG.png');
     height: 100%;
     min-height: 100vh;
-    
 }
 .next-button {
     background-color: rgb(148, 244, 4);
@@ -1811,7 +1801,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
+    height: 100%;
     padding: 20px;
     text-align: center;
 }
@@ -2062,11 +2052,5 @@ html, body {
     border:1px solid rgba(201, 198, 198, 0.497);
     padding: 3em;
     margin-bottom: 2%;
-    
-}
-.containerHomeG{
-    background-image: url('./components/images/backgrounds/FundoG.png');
-    height: 100%;
-    min-height: 100vh;
     
 }

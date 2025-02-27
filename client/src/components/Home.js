@@ -65,7 +65,7 @@ const Home = () => {
     };
 
     const financeTracks = [
-        { name: "ARB", image: arbitrum, width: 10 },
+        { name: "ARB", image: arbitrum, width: 0 },
         { name: "Wallet", image: metamask, width: 0 },
         { name: "Blockchain", image: blockchain, width: 0 },
         { name: "LINK", image: chainlink, width: 0 },

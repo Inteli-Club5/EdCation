@@ -10,10 +10,23 @@ import metamask from './images/metamask.png';
 import arbitrum from './images/arbitrum.png';
 import ethereum from './images/ethereum.png';
 import scroll from './images/scroll.png';
+import avatar from './images/avatar.png';
+import tokensImg from './images/tokens.png';
 
 import { getEscolhaUsuario } from './Escolha';
 
-const trackDescriptions = { /* ... descrições mantidas ... */ };
+const trackDescriptions = {
+    "ARB": "Arbitrum é uma solução de escalabilidade de segunda camada para Ethereum, que melhora a velocidade e reduz taxas de transação.",
+    "Wallet": "Uma carteira digital permite armazenar, enviar e receber criptomoedas com segurança.",
+    "Blockchain": "Blockchain é uma tecnologia de registro distribuído que garante segurança e transparência em transações digitais.",
+    "Chainlink": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
+    "LINK": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
+    "Bitcoin": "Bitcoin é a primeira criptomoeda descentralizada, projetada para ser um meio de troca digital seguro e sem intermediários.",
+    "DeFi": "Finanças Descentralizadas (DeFi) representam um ecossistema de serviços financeiros abertos baseados em blockchain.",
+    "Arbitrum": "Arbitrum utiliza Rollups para processar transações fora da cadeia principal do Ethereum, garantindo eficiência e baixo custo.",
+    "Ethereum": "Ethereum é uma plataforma blockchain que permite a criação de contratos inteligentes e aplicativos descentralizados.",
+    "Scroll": "Scroll é uma solução de escalabilidade para Ethereum baseada em Zero-Knowledge Rollups, promovendo transações rápidas e econômicas."
+};
 
 const Modal = ({ isOpen, onClose, title, trackImage, description }) => {
     if (!isOpen) return null;
@@ -68,26 +81,13 @@ const Home = () => {
         { name: "Scroll", image: scroll, width: 0 }
     ];
 
-    const ranking = [
-        {position: 1, name: "Alice", tokens: 150},
-        {position: 2, name: "Pedro", tokens: 110},
-        {position: 3, name: "João", tokens: 85},
-        {position: 4, name: "Thiago", tokens: 70},
-        {position: 5, name: "Victor", tokens: 65},
-    ]
-
-    const trackDescriptions = {
-        "ARB": "Arbitrum é uma solução de escalabilidade de segunda camada para Ethereum, que melhora a velocidade e reduz taxas de transação.",
-        "Wallet": "Uma carteira digital permite armazenar, enviar e receber criptomoedas com segurança.",
-        "Blockchain": "Blockchain é uma tecnologia de registro distribuído que garante segurança e transparência em transações digitais.",
-        "Chainlink": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
-        "LINK": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
-        "Bitcoin": "Bitcoin é a primeira criptomoeda descentralizada, projetada para ser um meio de troca digital seguro e sem intermediários.",
-        "DeFi": "Finanças Descentralizadas (DeFi) representam um ecossistema de serviços financeiros abertos baseados em blockchain.",
-        "Arbitrum": "Arbitrum utiliza Rollups para processar transações fora da cadeia principal do Ethereum, garantindo eficiência e baixo custo.",
-        "Ethereum": "Ethereum é uma plataforma blockchain que permite a criação de contratos inteligentes e aplicativos descentralizados.",
-        "Scroll": "Scroll é uma solução de escalabilidade para Ethereum baseada em Zero-Knowledge Rollups, promovendo transações rápidas e econômicas."
-    };
+    const Ranking = [
+        { position: 1, name: "Ronaldo de Lemos", tokens: "132.500" },
+        { position: 2, name: "Gabriel dos Santos", tokens: "114.142" },
+        { position: 3, name: "Alicia Munhoz", tokens: "106.890" },
+        { position: 4, name: "Pedro Correia", tokens: "102.860" },
+        { position: 5, name: "Thais da Silva", tokens: "100.060" },
+    ];
 
     const tracks = escolha === "Finanças" ? financeTracks : programmingTracks;
 
@@ -111,7 +111,7 @@ const Home = () => {
                 <div className="tracks-container">
                     {tracks.map((track, index) => (
                         <div key={index} className="track-card" onClick={() => openModal(track.name, track.image)}>
-                            <img src={track.image} className={track.name === "DeFi" || "Blockchain" ? "track-icon2" : "track-icon"}  alt={track.name} />
+                            <img src={track.image} className={["DeFi", "Blockchain"].includes(track.name) ? "track-icon2" : "track-icon"} alt={track.name} />
                             <p className="track-name">{track.name}</p>
                             <p className="access-link access">Acesse</p>
                             <div className="progress-bar-container">
@@ -121,10 +121,27 @@ const Home = () => {
                     ))}
                 </div>
             </div>
-            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={` ${selectedTrack}`} trackImage={trackImage} description={trackDescription} />
+            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} title={selectedTrack} trackImage={trackImage} description={trackDescription} />
             <div className="content-container">
                 <h1 className="title">Ranking</h1>
                 <hr className="horizontal-line" />
+                <div className='rankingGeral'>
+                    <div className='div-rank'>
+                        {Ranking.map((person, index) => (
+                            <div key={index} className='rank'>
+                                <div className='rank-part1'>
+                                    <h2 className='titulo2'>{person.position}</h2>
+                                    <img className='iconeJ' src={avatar} alt="Avatar" />
+                                    <h2 className='titulo2'>{person.name}</h2>
+                                </div>
+                                <div className='rank-part2'>
+                                    <img className='iconeJ2' src={tokensImg} alt="Tokens" />
+                                    <h4 className='tokensNum'>{person.tokens}</h4>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -27,6 +27,7 @@ class Login extends Component {
                             <Link to="/escolha">
                                 <button className='botao-login'>Entrar</button>
                             </Link>
+                            <br/>
                         </div>
                     </div>
                 </div>

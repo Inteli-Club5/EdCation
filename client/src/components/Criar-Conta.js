@@ -33,8 +33,9 @@ class CriarConta extends Component {
                         </div>
                         <div className='container-botoes'>
                             <Link to="/escolha">
-                                <button className='botao-login botao-login3'>Entrar</button>
+                                <button className='botao-login botao-login2'>Entrar</button>
                             </Link>
+                            <br/>
                         </div>
                     </div>
                 </div>

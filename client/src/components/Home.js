@@ -19,14 +19,16 @@ const trackDescriptions = { /* ... descrições mantidas ... */ };
 const Modal = ({ isOpen, onClose, title, trackImage, description }) => {
     if (!isOpen) return null;
 
+    const isArbitrumTrack = title.trim() === "Arbitrum" || title.trim() === "ARB";
+
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <img src={trackImage} className="track-icon-2" alt={title} />
                 <h2>{title}</h2>
                 <p className='texto'>{description}</p>
-                <Link to='/quiz'>
-                    <button className="start-button">Iniciar</button>
+                <Link to={isArbitrumTrack ? '/quiz' : '#'}>
+                    <button className="start-button" disabled={!isArbitrumTrack}>Iniciar</button>
                 </Link>
                 <button className="close-button" onClick={onClose}>&times;</button>
             </div>
@@ -89,7 +91,7 @@ const Home = () => {
                 <div className="tracks-container">
                     {tracks.map((track, index) => (
                         <div key={index} className="track-card" onClick={() => openModal(track.name, track.image)}>
-                            <img src={track.image} className="track-icon" alt={track.name} />
+                            <img src={track.image} className={track.name === "DeFi" ? "track-icon2" : "track-icon"}  alt={track.name} />
                             <p className="track-name">{track.name}</p>
                             <p className="access-link access">Acesse</p>
                             <div className="progress-bar-container">

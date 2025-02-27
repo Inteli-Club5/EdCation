@@ -4,22 +4,36 @@ import { Routes, Route, Link } from 'react-router-dom';
 class CriarConta extends Component {
     render() {
         return (
-            <div className='containerLog'>
-                <div className='metade'>
-                    <div className='loginMeio'>
-                        <h2 className='titulo1'>Crie sua conta</h2>
+            <div className='containerReg'>
+                <div className='metadeReg'>
+                    <div className='cadastroMeio'>
+                        <h2 className='titulo1'>Crie sua <strong className='lightgreen'>Conta</strong></h2>
                         <div className='container-caixadetexto'>
-                            <input className='caixadetexto' placeholder='Nome' type='text' />
-                            <h5>Data de Nascimento</h5>
-                            <input className='caixadetexto' placeholder='Data De Nascimento' type='date' />
-                            <input className='caixadetexto' placeholder='Email' type='text' />
-                            <input className='caixadetexto' placeholder='Senha' type='password' />
-                            <input className='caixadetexto' placeholder='Confirmar senha' type='password' />
+                            <div className='content-titulo'>
+                                <h7 className='textforbox'>Nome</h7>
+                            </div>
+                            <input className='caixadetexto' type='text' />
+                            <div className='content-titulo'>
+                                <h7 className='textforbox'>Data de Nascimento</h7>
+                            </div>
+                            <input className='caixadetexto' type='date' />
+                            <div className='content-titulo'>
+                                <h7 className='textforbox'>Email</h7>
+                            </div>
+                            <input className='caixadetexto' type='text' />
+                            <div className='content-titulo'>
+                                <h7 className='textforbox'>Senha</h7>
+                            </div>
+                            <input className='caixadetexto' type='password' />
+                            <div className='content-titulo'>
+                                <h7 className='textforbox'>Confirmar Senha</h7>
+                            </div>
+                            <input className='caixadetexto' type='password' />
                             <Link className='senhaText' to="/">Já Possuo Conta</Link>
                         </div>
                         <div className='container-botoes'>
                             <Link to="/escolha">
-                                <button className='botao-login'>Entrar</button>
+                                <button className='botao-login botao-login3'>Entrar</button>
                             </Link>
                         </div>
                     </div>

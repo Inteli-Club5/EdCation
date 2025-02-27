@@ -7,19 +7,27 @@ class Login extends Component {
             <div className='containerLog'>
                 <div className='metade'>
                     <div className='loginMeio'>
-                        <h2 className='titulo1'>Conecte sua conta</h2>
-                        <div className='container-caixadetexto'>                       
-                            <input className='caixadetexto' placeholder='Email' type='text'/>
-                            <input className='caixadetexto' placeholder='Senha' type='password'/>
+                        <div className='content-titulo'>
+                            <h2 className='titulo1'>Conecte sua <strong className='lightgreen'>Conta</strong></h2>
+                        </div>
+                        <div className='container-caixadetexto'>
+                            <div className='content-titulo'>
+                                <h5 className='textforbox'>Email</h5>
+                            </div>
+                            <input className='caixadetexto' type='text' />
+                            <div className='content-titulo'>
+                                <h5 className='textforbox'>Senha</h5>
+                            </div>
+                            <input className='caixadetexto' type='password' />
                         </div>
                         <div className='container-botoes'>
                             <Link to="/criar-conta" >
-                                <button className='botao-login'>Criar Conta</button>
+                                <button className='botao-login botao-login2'>Criar Conta</button>
                             </Link>
                             <Link to="/escolha">
                                 <button className='botao-login'>Entrar</button>
                             </Link>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

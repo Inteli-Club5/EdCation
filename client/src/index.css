@@ -14,17 +14,35 @@ html, body {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('https://www.linx.com.br/app/uploads/2022/08/shutterstock_1723989400.jpg');
+    background-image: url("/components/images/backgrounds/Login.png");
     background-size: cover;
     background-position: center;
     justify-content: flex-end;
+}
+.containerReg {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/components/images/backgrounds/Registro.png");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    
 }
 
 .metade {
     display: flex;
     flex-direction: column;
-    background-color: rgba(16, 2, 57, 0.9);
-    width: 35%;
+    width: 38%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.metadeReg {
+    display: flex;
+    flex-direction: column;
+    width: 37%;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -32,80 +50,139 @@ html, body {
 }
 
 .loginMeio {
+    height: 65vh;
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 2rem;
-    background-color: white;
-    border-radius: 10px;
+    background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border:1px solid rgba(201, 198, 198, 0.497);
+    border-radius: 5px;
     align-items: center;
+    justify-content: center;
+}
+.cadastroMeio{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid;
+    border:1px solid rgba(201, 198, 198, 0.497);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.content-titulo {
+    justify-content: left;
+    width: 82%;
 }
 
 .titulo1 {
-    font-weight: 700;
-    color: #101239;
-    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fdfdfd;
+    margin-bottom: 3rem;
 }
-
+.titulo2 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 26px;
+    color: #fdfdfd;
+    margin-top: 1.4rem;
+    margin-left: 2rem;
+    font-family: Raleway;
+}
 .container-caixadetexto {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1rem;
     margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.textforbox {
+    color: white;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .caixadetexto {
     padding: 0.75rem;
-    width: 100%;
-    border: 1px solid #ddd;
+    width: 82%;
+    height: 5.5vh;
+    border: 0.1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
+    background-color: #26262640;
+    margin-bottom: 1rem;
 }
 
 .senhaText {
     margin-top: 1rem;
-    font-size: 14px;
-    color: #db3f34;
+    font-size: 16px;
+    color: #fffffe;
+    font-weight: bold;
     text-decoration: none;
 }
 
 .senhaText:hover {
-    color: #b5372e;
+    color: rgb(148, 244, 4);
     text-decoration: none;
 }
 
-/* Ajuste para botões ficarem lado a lado */
+/* Contêiner dos botões */
 .container-botoes {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Alinha os botões na horizontal */
-    gap: 1rem; /* Espaçamento entre os botões */
-    justify-content: center; /* Centraliza os botões */
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
 }
 
 .container-botoes a {
-    flex: 1; /* Faz o link (e o botão) ocupar o mesmo espaço */
+    width: 85%;
     text-decoration: none;
 }
 
 .botao-login {
     width: 100%;
-    padding: 0.75rem;
+    height: 6vh;
     border: none;
     border-radius: 8px;
-    background-color: #3498db;
+    background-color: #3D3D3D;
     color: white;
-    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.botao-login2 {
+    border: 0.2px solid white;
+    background-color: rgb(148, 244, 4)
+}
+.botao-login3 {
+    border: 0.2px solid white;
+    background-color: rgb(148, 244, 4);
+    margin-bottom: 2rem;
+}
 
 .botao-login:hover {
-    background-color: #2980b9;
+    background-color: #d6d4d4;
 }
 
 .menu-container {
@@ -113,7 +190,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: white;
+    background-color: #1F1F1F;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -132,9 +209,11 @@ html, body {
 }
 
 .title {
-    font-size: 48px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 42px;
     margin-bottom: 24px;
-    color: #333;
+    color: #fffefe;
 }
 
 .horizontal-line {
@@ -173,6 +252,9 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     cursor: pointer;
+    background: linear-gradient(to bottom, #2E2E2E, #13131340);
+    border:1px solid rgba(201, 198, 198, 0.497);
+    
 }
 
 .track-card:hover {
@@ -187,7 +269,7 @@ html, body {
 
 .track-name {
     font-size: 20px;
-    color: #333;
+    color: #ffffff;
 }
 
 .track-name-2 {
@@ -200,9 +282,22 @@ html, body {
     margin-top: 8px;
     font-weight: bold;
 }
+.progress-bar-container {
+    width: 80%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-top: 2px;
+    overflow: hidden;
+}
 
+.progress-bar {
+    height: 100%;
+    background-color: #00fc08; /* Cor verde para progresso */
+    transition: width 0.5s ease-in-out;
+}
 .access {
-    color: green;
+    color: rgb(3, 255, 3);
 }
 
 .access-2 {
@@ -272,48 +367,74 @@ html, body {
 }
 
 .escolha-container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
+    background-image: url('./components/images/backgrounds/trilha.png');
 }
 
 .escolha-title {
     font-size: 32px;
     margin-bottom: 24px;
-    color: #333;
+    color: #ffffff;
+    font-family: Raleway;
+    font-weight: bold;
 }
-
+.gradient{
+    background-image: linear-gradient(to right,#8AA2FD, #59FF00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 .cards-container {
+    margin-top: 10vh;
+    background-color: rgba(255, 0, 0, 0);
+    justify-content: center;
+    width: 100%;
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    border:1px solid rgba(201, 198, 198, 0.497);
 }
-
+.meioCard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    background-color: rgb(255, 196, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 3px hidden rgb(255, 196, 0);
+}
+.meioCard2{
+    background-color: rgb(12, 7, 143);
+    border: 3px hidden rgb(12, 7, 143);
+}
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
 
 .card-image {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 8px;
 }
@@ -329,14 +450,36 @@ html, body {
     text-decoration: none;
     color: inherit;
 }
-
-.track-icon-2 {
-    width: 80px;
-    height: 80px;
+.textT{
+    font-family: Raleway;
+    font-size: 14px;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #bebcbc;
+    text-align: justify;
 }
-.content-perfil{
+.track-icon-2 {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.track-icon-3 {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 5 auto;
+    margin-top: 5%;
+    align-self: center;
+}
+
+.content-perfil {
     margin-top: 2%;
 }
+
 /* Perfil */
 .content-perfil {
     display: flex;
@@ -352,7 +495,6 @@ html, body {
     border-radius: 6px;
 }
 
-/* Botão de Logout */
 .logout-container {
     margin-top: 20px;
     display: flex;
@@ -375,4 +517,271 @@ html, body {
     background-color: #f80303;
     color: white;
     transform: scale(1.03);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    padding: 10px;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+.start-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10%;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}
+
+.texto {
+    font-size: 16px;
+    font-family: Raleway;
+    text-align: justify;
+    margin-top: 5%;
+}
+.lightgreen{
+    color: rgb(148, 244, 4);
+}
+/* App.css */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.question-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.option-button {
+    padding: 15px;
+    width: 60%;
+    font-size: 18px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.301);
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.304);
+}
+
+.option-button.correct {
+    background-color: #28a745;
+}
+
+.option-button.incorrect {
+    background-color: #dc3545;
+}
+
+.score {
+    margin-top: 20px;
+}
+
+.tokensImag {
+    width: 40px;
+    height: 40px;
+}
+.buttonEscolha{
+    width: 70%;
+    height: 6vh;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+.containerHome{
+    background-image: url('./components/images/backgrounds/Tracks.png');
+    height: 100vh;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .metade {
+        width: 100%;
+    }
+
+    .loginMeio {
+        width: 90%;
+    }
+
+    .titulo1 {
+        font-size: 24px;
+    }
+
+    .caixadetexto {
+        width: 90%;
+    }
+
+    .botao-login {
+        font-size: 1.2rem;
+    }
+
+    .content-container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .track-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .track-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .quiz-container {
+        padding: 10px;
+    }
+
+    .option-button {
+        width: 80%;
+    }
+
+    .start-button {
+        width: 80%;
+    }
+    .containerLog{
+        background-image: none;
+        background-color: rgb(22, 22, 22);
+    }
+    .containerReg{
+        background-image: none;
+        background-color: rgb(22, 22, 22);
+    }
+}
+
+@media (max-width: 480px) {
+    .metade {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .loginMeio {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .titulo1 {
+        font-size: 20px;
+    }
+
+    .caixadetexto {
+        width: 100%;
+    }
+
+    .botao-login {
+        font-size: 1rem;
+    }
+
+    .track-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .track-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .quiz-container {
+        padding: 5px;
+    }
+
+    .option-button {
+        width: 90%;
+    }
+
+    .start-button {
+        width: 90%;
+    }
 }

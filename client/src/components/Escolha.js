@@ -27,7 +27,7 @@ class Escolha extends Component {
                                 <img src={programacaoImg} alt="Programação" className="card-image" />
                             </div>
                             <p className="titulo2">Programação</p>
-                            <p className='textT'>Aprenda sobre: Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <p className='textT'>Domine blockchain e Web3, aprenda a criar smart contracts, dApps e explorar o universo da descentralização!</p>
                             <Link to="/home" onClick={() => this.handleEscolha("Programação")}>
                             <button className='buttonEscolha'>Seguir</button>
                         </Link>
@@ -38,7 +38,7 @@ class Escolha extends Component {
                             <img src={financasImg} alt="Finanças" className="card-image" />
                         </div>
                         <p className="titulo2">Finanças</p>
-                        <p className='textT'>Aprenda sobre: Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <p className='textT'>Entenda DeFi, tokens e criptoativos, aprenda a investir com segurança e aproveite as oportunidades da Web3!</p>
                         <Link to="/home" onClick={() => this.handleEscolha("Finanças")}>
                             <button className='buttonEscolha'>Seguir</button>
                         </Link>

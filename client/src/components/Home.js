@@ -18,7 +18,7 @@ const trackDescriptions = { /* ... descrições mantidas ... */ };
 const Modal = ({ isOpen, onClose, title, trackImage, description }) => {
     if (!isOpen) return null;
 
-    const isArbitrumTrack = title.trim() === "Arbitrum" || title.trim() === "ARB";
+    const isArbitrumTrack = title.trim() === "Arbitrum";
 
     return (
         <div className="modal-overlay" onClick={onClose}>
@@ -26,7 +26,7 @@ const Modal = ({ isOpen, onClose, title, trackImage, description }) => {
                 <img src={trackImage} className="track-icon-2" alt={title} />
                 <h2>{title}</h2>
                 <p className='texto'>{description}</p>
-                <Link to={isArbitrumTrack ? '/quiz' : '#'}>
+                <Link to={isArbitrumTrack ? '/licoes' : '/'}>
                     <button className="start-button" disabled={!isArbitrumTrack}>Iniciar</button>
                 </Link>
                 <button className="close-button" onClick={onClose}>&times;</button>

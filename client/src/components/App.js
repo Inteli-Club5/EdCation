@@ -6,6 +6,7 @@ import CriarConta from './Criar-Conta';
 import Conta from './Conta';
 import Escolha from './Escolha';
 import Quiz from './Quiz';
+import Lessons from './Teorico';
 
 class App extends Component {
     render() {
@@ -19,6 +20,7 @@ class App extends Component {
                         <Route path="/escolha" element={<Escolha/>}/>
                         <Route path="/conta" element={<Conta/>}/>
                         <Route path="/quiz" element={<Quiz/>}/>
+                        <Route path="/licoes" element={<Lessons/>}/>
                     </Routes>
                 </div>
             </div>

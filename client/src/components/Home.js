@@ -92,7 +92,7 @@ const Home = () => {
     const tracks = escolha === "Finanças" ? financeTracks : programmingTracks;
 
     return (
-        <div className='containerHome'>
+        <div className='containerHomeG'>
             <div className="menu-container">
                 <div className="logo-container">
                     <Link to="/home">

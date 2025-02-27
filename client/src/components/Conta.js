@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './images/edcation3.png';
 import profile from './images/profile.png';
-import certificado from './images/certificado.jpeg';
+import certificado from './images/certificado.png';
 
 const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
@@ -12,9 +12,9 @@ const Modal = ({ isOpen, onClose }) => {
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <img src={certificado} className="track-icon-2" />
                 <p className="access-link access-2">Arbitrum</p>
-                <p className="centraliza">0x42DC444aA142f78a8de8c7304BBBCd5B6581fe32</p>
+                <p className="centraliza">0xFa93958314E638c4244e4FaafC6e5924FF8E6D4A</p>
                 <button className="close-button" onClick={onClose}>&times;</button>
-                <a href="https://sepolia.arbiscan.io/address/0x42DC444aA142f78a8de8c7304BBBCd5B6581fe32">
+                <a href="https://sepolia.arbiscan.io/address/0xFa93958314E638c4244e4FaafC6e5924FF8E6D4A">
                     <button className="start-button">Acesse</button>
                 </a>
             </div>

@@ -52,8 +52,8 @@ const Home = () => {
     };
 
     const financeTracks = [
-        { name: "ARB", image: arbitrum, width: 0 },
-        { name: "Wallet", image: metamask, width: 10 },
+        { name: "ARB", image: arbitrum, width: 10 },
+        { name: "Wallet", image: metamask, width: 0 },
         { name: "Blockchain", image: blockchain, width: 0 },
         { name: "LINK", image: chainlink, width: 0 },
         { name: "Bitcoin", image: bitcoin, width: 0 },
@@ -68,6 +68,19 @@ const Home = () => {
         { name: "Ethereum", image: ethereum, width: 0 },
         { name: "Scroll", image: scroll, width: 0 }
     ];
+
+    const trackDescriptions = {
+        "ARB": "Arbitrum é uma solução de escalabilidade de segunda camada para Ethereum, que melhora a velocidade e reduz taxas de transação.",
+        "Wallet": "Uma carteira digital permite armazenar, enviar e receber criptomoedas com segurança.",
+        "Blockchain": "Blockchain é uma tecnologia de registro distribuído que garante segurança e transparência em transações digitais.",
+        "Chainlink": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
+        "LINK": "Chainlink é uma rede descentralizada de oráculos que conecta contratos inteligentes a dados do mundo real.",
+        "Bitcoin": "Bitcoin é a primeira criptomoeda descentralizada, projetada para ser um meio de troca digital seguro e sem intermediários.",
+        "DeFi": "Finanças Descentralizadas (DeFi) representam um ecossistema de serviços financeiros abertos baseados em blockchain.",
+        "Arbitrum": "Arbitrum utiliza Rollups para processar transações fora da cadeia principal do Ethereum, garantindo eficiência e baixo custo.",
+        "Ethereum": "Ethereum é uma plataforma blockchain que permite a criação de contratos inteligentes e aplicativos descentralizados.",
+        "Scroll": "Scroll é uma solução de escalabilidade para Ethereum baseada em Zero-Knowledge Rollups, promovendo transações rápidas e econômicas."
+    };
 
     const tracks = escolha === "Finanças" ? financeTracks : programmingTracks;
 

@@ -1,0 +1,47 @@
+[package]
+name = "certificado-nft"
+version = "0.1.0"
+edition = "2018"
+license = "MIT"
+keywords = ["arbitrum", "ethereum", "stylus", "alloy"]
+description = "Certificado NFT"
+
+[dependencies]
+ink_env = "3.0"  # ou versão compatível
+ink_lang = "3.0"  # ou versão compatível
+ink_storage = "3.0"  # ou versão compatível
+alloy-primitives = "=0.8.20"
+alloy-sol-types = "=0.8.20"
+mini-alloc = "0.4.2"
+stylus-sdk = "0.8.0"
+hex = "0.4.3"
+dotenv = "0.15.0"
+
+[dev-dependencies]
+tokio = { version = "1.12.0", features = ["full"] }
+ethers = "2.0"
+eyre = "0.6.8"
+
+[dependencies.scale]
+version = "2.0"
+
+[dependencies.spree]
+version = "2.0"  # Dependências necessárias para Stylus (caso tenha)
+
+[features]
+export-abi = ["stylus-sdk/export-abi"]
+debug = ["stylus-sdk/debug"]
+
+[[bin]]
+name = "nft-certificado"
+path = "src/lib.rs"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "s"

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BrowserProvider, parseEther } from "ethers";
 import logo from './images/edcation3.png';
 import profile from './images/profile.png';
 import pix from './images/pix.png';
@@ -7,44 +8,44 @@ import onchain from './images/onchain.png';
 
 class Assinatura extends Component {
 
+    // Função para conectar à MetaMask e fazer o pagamento para um contrato inteligente
     connectMetaMaskAndPay = async () => {
-        if (window.ethereum) {
+        if (typeof window.ethereum !== "undefined") {
             try {
-                // Solicita a conexão da MetaMask
-                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const provider = new BrowserProvider(window.ethereum);
+                const accounts = await provider.send("eth_requestAccounts", []);
+                const signer = await provider.getSigner();
 
-                // Verifica se a rede está na Arbitrum Sepolia
-                const currentChainId = await window.ethereum.request({ method: 'eth_chainId' });
-                if (currentChainId !== '0xa4b1') {
-                    // Se não estiver, solicita a troca de rede para Arbitrum Sepolia (ID: 0xa4b1)
+                console.log("Conectado com a conta:", accounts[0]);
+
+                // Verifica se está na rede Arbitrum Sepolia
+                const network = await provider.getNetwork();
+                if (network.chainId !== 421614) {  // ID da Arbitrum Sepolia
                     await window.ethereum.request({
-                        method: 'wallet_switchEthereumChain',
-                        params: [{ chainId: '0xa4b1' }],
+                        method: "wallet_switchEthereumChain",
+                        params: [{ chainId: "0x66eee" }], // 0x66eee é a Arbitrum Sepolia
                     });
                 }
 
-                // Dados para o pagamento para o contrato inteligente
-                const toAddress = '0x2fc88293BF7026DA8326542844227Bf82423359E';  // Endereço do contrato inteligente
-                const amountInWei = window.web3.utils.toWei('0.0001', 'ether');  // Pagamento de 0.01 ETH (em Wei)
-
-                // Realiza a transação para o contrato inteligente
-                const txHash = await window.ethereum.request({
-                    method: 'eth_sendTransaction',
-                    params: [{
-                        from: accounts[0],
-                        to: toAddress,
-                        value: amountInWei,
-                        gas: '0x5208',  // Gas limit (21000 Gwei)
-                        gasPrice: '0x3b9aca00',  // Gas price
-                    }],
+                // Criar e enviar a transação
+                const tx = await signer.sendTransaction({
+                    to: "0x7d2e47076043786803b2258511359C3C198c3b73",  // Substitua pelo contrato real
+                    value: parseEther("0.0001"), 
                 });
 
-                console.log("Transação enviada com sucesso! Hash:", txHash);
+                console.log("Transação enviada! Hash:", tx.hash);
+
+                const receipt = await tx.wait(); 
+                if (receipt.status === 1) {
+                    window.location.href = '/home';
+                } else {
+                    alert("Falha na transação.");
+                }
             } catch (error) {
-                console.error("Erro ao tentar se conectar ou realizar a transação:", error);
+                console.error("Erro ao conectar ou transacionar:", error);
             }
         } else {
-            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
+            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
         }
     };
 
@@ -74,13 +75,11 @@ class Assinatura extends Component {
                                 <img src={onchain} className="track-icon2" alt="onchain"/>
                                 <br/>
                                 <p className="track-name">OnChain</p>
-                                <p className="track-name">ETH 0,0001</p>
                             </div>
                             <div className="track-card">
                                 <img src={pix} className="track-icon2" alt="pix"/>
                                 <br/>
                                 <p className="track-name">PIX</p>
-                                <p className="track-name">R$ 20,00</p>
                             </div>
                         </div>
                     </center>
@@ -90,4 +89,4 @@ class Assinatura extends Component {
     }
 };
 
-export default Assinatura;
+export default Assinatura;

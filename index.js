@@ -8,5 +8,5 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/dist/index.html'));
 });
 
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => console.log(`listening at localhost: ${PORT}`));

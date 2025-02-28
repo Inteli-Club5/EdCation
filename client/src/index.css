@@ -986,7 +986,7 @@ body {
     /* Garante que ocupe toda a altura da tela */
     min-height: 100vh;
     /* Evita cortes em alguns navegadores */
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Responsividade */
@@ -2555,4 +2555,73 @@ body {
         max-width: 300px;
     }
 
+}
+
+.quadrado-iterativo {
+    width: 60%;
+    justify-content: center;
+}
+
+/* Estilizando a caixa de texto */
+textarea {
+    background-color: #1e1e1e;
+    /* Fundo preto */
+    color: #ffffff;
+    /* Texto branco */
+    border: 1px solid #333333;
+    /* Borda escura */
+    padding: 10px;
+    /* Espaçamento interno */
+    font-family: 'Courier New', Courier, monospace;
+    /* Fonte monoespaçada */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    width: 60%;
+    /* Largura da caixa de texto */
+    margin-bottom: 15px;
+    /* Espaço abaixo da caixa de texto */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+}
+
+/* Estilo do botão de submeter código */
+.buttonok {
+    background-color: #2980b9;
+    /* Cor de fundo vermelha */
+    color: white;
+    /* Texto branco */
+    border: none;
+    /* Sem borda */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Cursor de clique */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+    /* Animação de transição */
+    width: 60%;
+}
+
+/* Alterar a cor do botão ao passar o mouse por cima */
+.buttonok:hover {
+    background-color: #1c5377;
+    /* Cor vermelha mais intensa */
+}
+
+/* Estilo da resposta correta ou errada */
+.correctzin {
+    color: green;
+    /* Texto verde para resposta correta */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+.incorrectzin {
+    color: red;
+    /* Texto vermelho para resposta errada */
+    font-weight: bold;
+    /* Texto em negrito */
 }

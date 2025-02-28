@@ -7,20 +7,30 @@ import tokensI from './images/tokens.png';
 
 const questions = [
     {
-        question: "Qual é a capital do Brasil?",
-        options: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
-        answer: "Brasília"
+        question: "Qual camada da blockchain é responsável por garantir que diferentes redes se conectem?",
+        options: ["L0", "L1", "L2", "Dapp"],
+        answer: "L0"
     },
     {
-        question: "Qual é a maior montanha do mundo?",
-        options: ["Monte Everest", "K2", "Montanha Kilimanjaro", "Montanha Fuji"],
-        answer: "Monte Everest"
+        question: "Arbitrum resolve o problema de qual aspecto da blockchain?",
+        options: ["Escalabilidade", "Descentralização", "Privacidade", "Consenso"],
+        answer: "Escalabilidade"
     },
     {
-        question: "Quantos continentes existem?",
-        options: ["5", "6", "7", "8"],
-        answer: "7"
-    }
+        question: "Qual camada da blockchain é onde as transações são registradas e a segurança é garantida?",
+        options: ["L0", "L1", "L2", "L3"],
+        answer: "L1"
+    },
+    {
+        question: "Como Arbitrum ajuda a reduzir os custos de transação no Ethereum?",
+        options: ["Aumentando o tamanho de cada bloco de transação", "Utilizando Rollups para processar transações mais rapidamente e com menos custo", "Centralizando as validações de transações", "Descentralizando a rede Ethereum"],
+        answer: "Utilizando Rollups para processar transações mais rapidamente e com menos custo"
+    },
+    {
+        question: "As DApps são criadas em qual camada da blockchain?",
+        options: ["L0", "L1", "L2", "L3"],
+        answer: "L1"
+    },
 ];
 
 function Quiz() {
@@ -52,7 +62,11 @@ function Quiz() {
         setSelectedAnswer(option);
         if (option === question.answer) {
             setIsAnswerCorrect(true);
-            setTokens((prevTokens) => prevTokens + 5); // Adiciona 5 tokens se a resposta estiver correta
+            setTokens((prevTokens) => {
+                const newTokens = prevTokens + 5;
+                localStorage.setItem('tokens', newTokens); // Salva os tokens no localStorage
+                return newTokens;
+            });
         } else {
             setIsAnswerCorrect(false);
         }
@@ -63,6 +77,7 @@ function Quiz() {
         }, 1000);
     };
 
+
     const handleNextQuestion = () => {
         setIsAnswerCorrect(null);
         setSelectedAnswer(null);
@@ -70,7 +85,7 @@ function Quiz() {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
             setTimeLeft(60); // Reseta o tempo para 60 segundos a cada nova pergunta
         } else {
-            navigate('/recompensa')
+            navigate('/iteracao')
         }
     };
 

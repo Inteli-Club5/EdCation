@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+// CriarConta.js
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from "react-router-dom";
 
 const CriarConta = () => {
     const [nome, setNome] = useState('');
@@ -11,19 +12,21 @@ const CriarConta = () => {
     const [emailValido, setEmailValido] = useState(true);
     const [senhaValida, setSenhaValida] = useState(true);
     const [nomeValido, setNomeValido] = useState(true);
-    const navigate = useNavigate();  // Usando o hook useNavigate
 
-    // Função para validar o nome
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // Obter o tipo de conta a partir do estado passado pela navegação
+    const tipoConta = location.state?.tipo;
+
     const validarNome = (nome) => {
         return nome.trim() !== '';
     };
 
-    // Função para validar o email
     const validarEmail = (email) => {
         return email.length > 0;
     };
 
-    // Função para validar a senha
     const validarSenha = (senha) => {
         return senha.length > 0;
     };
@@ -44,10 +47,10 @@ const CriarConta = () => {
         } else if (!senhaValida) {
             alert('A senha deve estar vazia!');
             setErroMensagem('A senha deve estar vazia!');
-        }  else {
+        } else {
             setErroMensagem('');
-            navigate("/escolha");
-            console.log("Conta criada com sucesso!");
+            console.log(`Conta criada com sucesso para o tipo: ${tipoConta}`);
+            navigate("/escolha");  // Após o cadastro, redireciona para a página de escolha
         }
 
         setEmailValido(emailValido);
@@ -60,6 +63,7 @@ const CriarConta = () => {
             <div className='metadeReg'>
                 <div className='cadastroMeio'>
                     <h2 className='titulo1'>Crie sua <strong className='lightgreen'>Conta</strong></h2>
+                    <p>Tipo de conta selecionada: {tipoConta}</p> {/* Exibe o tipo de conta escolhido */}
                     <div className='container-caixadetexto'>
                         <div className='content-titulo'>
                             <h7 className='textforbox'>Nome</h7>
@@ -113,7 +117,6 @@ const CriarConta = () => {
                             value={confirmarSenha}
                             onChange={(e) => setConfirmarSenha(e.target.value)}
                         />
-                        <Link className='senhaText' to="/">Já Possuo Conta</Link>
                     </div>
                     <div className='container-botoes'>
                         <button className='botao-login botao-login2' onClick={handleSubmit}>Criar Conta</button>

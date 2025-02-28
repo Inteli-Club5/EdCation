@@ -7,7 +7,7 @@
     "dev": "npm run dev-client & nodemon index.js",
     "build-client": "npm run clean && parcel build client/src/index.html --out-dir client/dist",
     "dev-client": "npm run clean && parcel client/src/index.html --out-dir client/dist",
-    "clean": "if exist .cache (rmdir /s/q .cache) && if exist client\\dist (rmdir /s/q client\\dist)",
+    "clean": "rm -rf .cache client/dist",
     "parcel": "parcel client/src/index.html --out-dir client/dist"
   },
   "keywords": [],

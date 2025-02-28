@@ -1,4 +1,4 @@
-# EdCation3 - Transformando e Facilitando a Web3
+# EdCation3 - Descomplicando a Web3
 
 ![logo](./logo.png)
 

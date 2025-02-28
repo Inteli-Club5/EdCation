@@ -12,7 +12,6 @@ import ethereum from './images/ethereum.png';
 import scroll from './images/scroll.png';
 import avatar from './images/avatar.png';
 import tokensImg from './images/tokens.png';
-import voltar from './images/voltar.png';
 
 import { getEscolhaUsuario } from './Escolha';
 
@@ -36,16 +35,16 @@ const Modal = ({ isOpen, onClose, title, trackImage, description }) => {
 
     return (
         <div className="modal-overlay" onClick={onClose}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={trackImage} className="track-icon-2" alt={title} />
-            <h2>{title}</h2>
-            <p className='texto'>{description}</p>
-            <Link to={isArbitrumTrack ? '/licoes' : '/assinatura'}>
-                <button className={isArbitrumTrack ? "start-button" : "assine-button"}>{isArbitrumTrack ? "Iniciar" : "Assinar"}</button>
-            </Link>
-            <button className="close-button" onClick={onClose}>&times;</button>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <img src={trackImage} className="track-icon-2" alt={title} />
+                <h2>{title}</h2>
+                <p className='texto'>{description}</p>
+                <Link to={isArbitrumTrack ? '/licoes' : '/assinatura'}>
+                    <button className={isArbitrumTrack ? "start-button" : "assine-button"}>{isArbitrumTrack ? "Iniciar" : "Assinar"}</button>
+                </Link>
+                <button className="close-button" onClick={onClose}>&times;</button>
+            </div>
         </div>
-    </div>
 
     );
 };
@@ -84,11 +83,11 @@ const Home = () => {
     ];
 
     const Ranking = [
-        { position: 1, name: "Ronaldo de Lemos", tokens: "132.500"},
-        { position: 2, name: "Gabriel dos Santos", tokens: "114.142"},
-        { position: 3, name: "Alicia Munhoz", tokens: "106.890"},
-        { position: 4, name: "Pedro Correia", tokens: "102.860"},
-        { position: 5, name: "Thais da Silva", tokens: "100.060"},
+        { position: 1, name: "Ronaldo de Lemos", tokens: "132.500" },
+        { position: 2, name: "Gabriel dos Santos", tokens: "114.142" },
+        { position: 3, name: "Alicia Munhoz", tokens: "106.890" },
+        { position: 4, name: "Pedro Correia", tokens: "102.860" },
+        { position: 5, name: "Thais da Silva", tokens: "100.060" },
     ];
 
     const tracks = escolha === "Finanças" ? financeTracks : programmingTracks;
@@ -120,7 +119,7 @@ const Home = () => {
                 <div className="tracks-container">
                     {tracks.map((track, index) => (
                         <div key={index} className="track-card" onClick={() => openModal(track.name, track.image)}>
-                            <img src={track.image} className={track.name === "DeFi" || "Blockchain" ? "track-icon2" : "track-icon"}  alt={track.name} />
+                            <img src={track.image} className={track.name === "DeFi" || "Blockchain" ? "track-icon2" : "track-icon"} alt={track.name} />
                             <p className="track-name">{track.name}</p>
                             <p className={track.name === "Arbitrum" ? "access-link access" : "access-link hire"}>{track.name === "Arbitrum" ? "Acesse" : "Assine"}</p>
                             <div className="progress-bar-container">

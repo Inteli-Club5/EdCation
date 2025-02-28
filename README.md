@@ -45,6 +45,8 @@ EdCation3 é uma plataforma criada para alavancar as conexões no mundo profissi
 HACKATHON-BH
 ├── certificado-nft
 │   └── ...
+├── token-smd
+|   └── ...
 ├── client
 │   └── ...
 ├── README.MD
@@ -52,9 +54,9 @@ HACKATHON-BH
 ```
 
 - certificado-nft
-    - pasta com o projeto Arbitrum
-- client
-    - a
+    - pasta com o projeto certificado como nft emitido na Arbitrum com Arbitrum Stylus
+- token-smd
+    - pasta com o projeto token simulador (SMD) como erc-20 emitido na Arbitrum com Arbitrum Stylus
 
 ## Tech Stacks
 

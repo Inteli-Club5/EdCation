@@ -633,6 +633,7 @@ html, body {
     color: #bebcbc;
     text-align: justify;
 }
+
 .textT2{
     font-family: Raleway;
     font-size: 1em;
@@ -640,7 +641,6 @@ html, body {
     color: #bebcbc;
     text-align: justify;
 }
-
 
 @media (max-width: 1224px) {
     .cards-container {
@@ -827,6 +827,19 @@ html, body {
     font-family: Raleway;
     text-align: justify;
     margin-top: 5%;
+}
+
+.texto-link {
+    text-decoration: none;
+    color: rgb(25, 92, 168);
+    font-size: 16px;
+    font-family: Raleway;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.texto-link:hover {
+    text-decoration: none;
 }
 
 .texto-center {

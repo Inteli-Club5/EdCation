@@ -9,6 +9,7 @@ import Quiz from './Quiz';
 import Lessons from './Teorico';
 import Assinatura from './Assinatura';
 import PreStart from './PreStart';  // Importando a página PreStart
+import Recompensa from './Recompensa';
 
 class App extends Component {
     render() {
@@ -24,6 +25,7 @@ class App extends Component {
                     <Route path="/quiz" element={<Quiz/>}/>
                     <Route path="/licoes" element={<Lessons/>}/>
                     <Route path="/assinatura" element={<Assinatura/>}/>
+                    <Route path="/recompensa" element={<Recompensa/>}/>
                 </Routes>
             </div>
         );

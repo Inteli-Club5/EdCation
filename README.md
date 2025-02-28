@@ -57,6 +57,8 @@ HACKATHON-BH
 |   └── ...
 ├── token-smd
 |   └── ...
+├── docs
+|   └── ...
 ├── README.MD
 │   
 ```
@@ -64,11 +66,13 @@ HACKATHON-BH
 - certificado-nft
     - Pasta com o projeto certificado como nft emitido na Arbitrum com Arbitrum Stylus
 - client
-    - Pasta com projeto React
+    - Pasta com projeto React contendo todo o front-end na subpasta ```/src```
 - scroll
-    - Pasta com NFTs emitidos na Scroll
+    - Pasta com 3 NFTs de exemplo emitidos na Scroll e que equivalem a brindes da gamificação da trilha educacional
 - token-smd
     - Pasta com o projeto token simulador (SMD) como erc-20 emitido na Arbitrum com Arbitrum Stylus
+- docs
+    - Pasta com um arquivo contendo a análise de mercado, público alvo, concorrências e proposta de valor
 
 ## Tech Stacks
 

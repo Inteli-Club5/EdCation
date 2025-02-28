@@ -29,10 +29,9 @@ class Escolha extends Component {
                             <p className="titulo2">Programação</p>
                             <p className='textT'>Domine blockchain e Web3, aprenda a criar smart contracts, dApps e explorar o universo da descentralização!</p>
                             <Link to="/home" onClick={() => this.handleEscolha("Programação")}>
-                            <button className='buttonEscolha'>Seguir</button>
-                        </Link>
+                                <button className='buttonEscolha'>Seguir</button>
+                            </Link>
                         </div>
-
                     <div className="card">
                         <div className='meioCard meioCard2'>
                             <img src={financasImg} alt="Finanças" className="card-image" />
@@ -42,6 +41,7 @@ class Escolha extends Component {
                         <Link to="/home" onClick={() => this.handleEscolha("Finanças")}>
                             <button className='buttonEscolha'>Seguir</button>
                         </Link>
+                        <br/>
                     </div>
                 </div>
             </div>

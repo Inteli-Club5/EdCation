@@ -474,7 +474,7 @@ html, body {
 .card {
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 65vh;
     width: 20%; /* Tamanho ajustado */
     max-width: 90%; /* Evita que fiquem muito grandes */
     background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);

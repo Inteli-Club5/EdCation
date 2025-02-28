@@ -6,10 +6,10 @@
 EdCation3 é uma plataforma criada para alavancar as conexões no mundo profissional web3 e democratizar o acesso ao conhecimento em blockchain e criptoativos. Nela, usuários interessados em aprender sobre web3 recebem conteúdo gratuito e gamificado, ao passo que podem aprimorar sua experiência e entrar no banco de talentos profissionais da plataforma. Por outro lado, empresas e startups que necessitam de talentos qualificados de forma rápida e fácil podem acessar o banco de profissionais da plataforma e criar conexões de trabalho. Qualificando estudantes e aumentando a confiança e rapidez de contratações, planejamos auxiliar e criar novas oportunidades acadêmicas, profissionais e sociais através da Blockchain.
 
 ## Features
-- Conteúdo educacional gratuito:
-- Tracks educacionais técnicas:
-- Gamificação:
-- Banco de talentos:
+- Conteúdo educacional gratuito
+- Tracks educacionais técnicas
+- Gamificação
+- Banco de talentos & Headhunting
 
 ## Instalação 
 ### Back-end e Blockchain
@@ -39,46 +39,61 @@ EdCation3 é uma plataforma criada para alavancar as conexões no mundo profissi
 
 ### Front-end
 
+1. Instale as dependências necessárias
+- ```npm install```
+
+2. Rode a aplicação web
+- ```npm start```
+
 ## Estrutura de pastas
 
 ```
 HACKATHON-BH
 ├── certificado-nft
 │   └── ...
-├── token-smd
-|   └── ...
 ├── client
 │   └── ...
+├── scroll
+|   └── ...
+├── token-smd
+|   └── ...
 ├── README.MD
 │   
 ```
 
 - certificado-nft
-    - pasta com o projeto certificado como nft emitido na Arbitrum com Arbitrum Stylus
+    - Pasta com o projeto certificado como nft emitido na Arbitrum com Arbitrum Stylus
+- client
+    - Pasta com projeto React
+- scroll
+    - Pasta com NFTs emitidos na Scroll
 - token-smd
-    - pasta com o projeto token simulador (SMD) como erc-20 emitido na Arbitrum com Arbitrum Stylus
+    - Pasta com o projeto token simulador (SMD) como erc-20 emitido na Arbitrum com Arbitrum Stylus
 
 ## Tech Stacks
 
 ### Backend & Blockchain
-##### API:
-- 
 
-##### Pacotes externos
+#### Blockchains
+- Scroll
+- Arbitrum
+
+#### Pacotes externos
 - rustup
 - rustc
 - cargo
 
-##### Framework de arquitetura de software
-- a
-
 ### Front-end
 
-##### Pacotes externos
-- a
+#### Pacotes externos
+- React
 
 ## Roadmap
-- Futuras funcionalidades
+Planejamos implementar outras funcionalidades ao pensar no projeto a longo prazo, sendo elas:
+- Criação de match-making com IA entre empresas interessadas e candidatos;
+- Criação de programas B2B de capacitação para colaboradores de empresas parceiras;
+- Desenvolvimento de trilhas educacionais e técnicas voltadas para negócios e criptoativos;
+- Desenvolvimento de projetos mensais entre empresas e alunos da plataforma;
 
 ## Agradecimentos
-Um agradecimento especial à equipes de organização do Modular Carnival e a Arbitrum pela oportunidade. 
+Um agradecimento especial à equipes de organização do Modular Carnival e a Arbitrum e Scroll pela oportunidade. 

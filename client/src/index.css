@@ -507,12 +507,12 @@ html, body {
     flex-direction: column;
     width: 100%;
     height: 45%;
-    background-color: rgb(255, 196, 0);
+    background-color: #ff9256;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     justify-content: center;
     align-items: center;
-    border: 3px hidden rgb(255, 196, 0);
+    border: 3px hidden #ff9256;
 }
 
 .meioCard2 {

@@ -15,9 +15,9 @@ class App extends Component {
         return (
             <div>
                 <Routes>
-                    <Route path="/" element={<Login/>}/>
+                    <Route path="/login" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
-                    <Route path="/pre-start" element={<PreStart/>}/> 
+                    <Route path="/" element={<PreStart/>}/> 
                     <Route path="/criar-conta" element={<CriarConta/>}/> 
                     <Route path="/escolha" element={<Escolha/>}/>
                     <Route path="/conta" element={<Conta/>}/>

@@ -55,7 +55,7 @@ const Login = () => {
                             />
                         </div>
                         <div className='container-botoes'>
-                            <Link to="/pre-start">
+                            <Link to="/criar-conta">
                                 <button className='botao-login botao-login2'>Criar Conta</button>
                             </Link>
                             <Link>

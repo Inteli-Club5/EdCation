@@ -1,32 +1,35 @@
 // PreStart.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+import empresa from './images/empresa.png';
+import profile from './images/profile-1.png';
 
 const PreStart = () => {
-    const navigate = useNavigate();
-
-    const handleEscolhaConta = (tipo) => {
-        navigate(`/criar-conta`);
-    };
-
     return (
-        <div className="containerReg">
-            <div className="metadeReg">
-                <div className="cadastroMeio">
-                    <h2 className="titulo1">
-                        Escolha o Tipo de <strong className="lightgreen">Conta</strong>
-                    </h2>
-                    <div className="container-botoes">
-                        <button className="botao-login botao-login2" onClick={() => handleEscolhaConta('aluno')}>
-                            Conta de Aluno
-                        </button>
-                        <button className="botao-login botao-login2" onClick={() => handleEscolhaConta('empresarial')}>
-                            Conta Empresarial
-                        </button>
+        <div className="escolha-container">
+                        <h1 className="escolha-title">Escolha o Tipo de <strong className='gradient'>Conta</strong></h1>
+                        <div className="cards-container">
+                            <div className="card">
+                                <div className='meioCard'>
+                                    <img src={profile} alt="Usuário" className="card-image" />
+                                </div>
+                                <p className="titulo2">Usuário</p>
+                                <Link to="/login" onClick={() => this.handleEscolha("Usuário")}>
+                                    <button className='buttonEscolha'>Seguir</button>
+                                </Link>
+                            </div>
+                            <div className="card">
+                                <div className='meioCard meioCard2'>
+                                    <img src={empresa} alt="Empresa" className="card-image" />
+                                </div>
+                                <p className="titulo2">Empresa</p>
+                                <Link to="/login" onClick={() => this.handleEscolha("Empresa")}>
+                                    <button className='buttonEscolha'>Seguir</button>
+                                </Link>
+                                <br />
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
     );
 };
 

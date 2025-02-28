@@ -1,6 +1,7 @@
 // CriarConta.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
 
 const CriarConta = () => {
     const [nome, setNome] = useState('');
@@ -117,6 +118,7 @@ const CriarConta = () => {
                             value={confirmarSenha}
                             onChange={(e) => setConfirmarSenha(e.target.value)}
                         />
+                        <Link className='senhaText' to="/login">Já Possuo Conta</Link>
                     </div>
                     <div className='container-botoes'>
                         <button className='botao-login botao-login2' onClick={handleSubmit}>Criar Conta</button>

@@ -2293,3 +2293,39 @@ html, body {
     justify-self: flex-end; /* Não tem efeito aqui */
     margin-top: auto; /* Empurra para o final do contêiner pai */
 }
+
+.token-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center;
+    gap: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.token-icon {
+    width: 25px; /* Define um tamanho pequeno */
+    height: 25px;
+    margin-bottom: 3px;
+    object-fit: contain; /* Mantém a proporção */
+}
+
+.gold {
+    color: gold;
+}
+
+.buttonComprar3 {
+    width: 15%;
+    height: 4em;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 1em;
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 1em;
+    transition: transform 0.3s ease-in-out; /* Adicionando a transição suave */
+}
+
+.buttonComprar3:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+}

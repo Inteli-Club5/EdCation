@@ -47,9 +47,9 @@ const HomeEmpresa = () => {
     };
 
     const Users = [
-        { name: "Lucas da Silva", image: homem, width: 0 },
-        { name: "Manuela Araujo", image: profile, width: 0 },
-        { name: "Patricia Fernandez", image: mulher, width: 0 },
+        { name: "Lucas da Silva", image: homem, class: 'track-icon' },
+        { name: "Manuela Araujo", image: profile, class: 'track-icon' },
+        { name: "Patricia Fernandez", image: mulher, class: 'track-icon' },
     ];
 
     const Ranking = [
@@ -80,7 +80,7 @@ const HomeEmpresa = () => {
                 <div className="tracks-container">
                     {Users.map((User, index) => (
                         <div key={index} className="track-card" onClick={() => openModal(User.name, User.image)}>
-                            <img src={User.image} className="track-icon" alt={User.name} />
+                            <img src={User.image} className={User.class} alt={User.name} />
                             <p className="track-name">{User.name}</p>
                             <p className="access-link hire">Informações</p>
                         </div>

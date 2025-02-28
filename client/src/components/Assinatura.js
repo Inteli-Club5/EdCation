@@ -7,7 +7,6 @@ import onchain from './images/onchain.png';
 
 class Assinatura extends Component {
 
-    // Função para conectar à MetaMask e fazer o pagamento para um contrato inteligente
     connectMetaMaskAndPay = async () => {
         if (typeof window.ethereum !== "undefined") {
             try {
@@ -41,7 +40,7 @@ class Assinatura extends Component {
                 const transactionParameters = {
                     to: '0x7d2e47076043786803b2258511359C3C198c3b73', // Substitua pelo contrato real
                     from: account,
-                    value: '0x0D6E2F1A50000', // Equivalente a 0.0001 ETH em Wei
+                    value: '0x16345785D8A0000', // Equivalente a 0.0001 ETH em Wei
                 };
 
                 // Envia a transação

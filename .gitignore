@@ -8,3 +8,4 @@ client/dist/
 /token-smd/target
 /token-smd/.env
 /token-smd/.env.example
+.vercel

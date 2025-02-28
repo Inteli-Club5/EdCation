@@ -8,6 +8,7 @@ import Escolha from './Escolha';
 import Quiz from './Quiz';
 import Lessons from './Teorico';
 import Assinatura from './Assinatura';
+import Recompensa from './Recompensa';
 
 class App extends Component {
     render() {

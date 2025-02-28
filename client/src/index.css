@@ -295,12 +295,6 @@ html, body {
     color: #fffefe;
 }
 
-.horizontal-line {
-    border: none;
-    border-top: 2px solid #ddd;
-    margin: 16px 0;
-    width: 100%;
-}
 
 .track-icon {
     width: 80px;
@@ -480,6 +474,7 @@ html, body {
 .card {
     display: flex;
     flex-direction: column;
+    height: 350px;
     width: 20%; /* Tamanho ajustado */
     max-width: 90%; /* Evita que fiquem muito grandes */
     background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);
@@ -2088,4 +2083,80 @@ html, body {
 
 .no-effect:hover {
     text-decoration: none;
+}
+.cards-container2 {
+    margin-top: 10vh;
+    display: flex;
+    width: 100%;
+    height: auto; /* Ajusta automaticamente */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    gap: 40px;
+}
+.cards-container2 a {
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width: 480px) {
+    .cards-container2{
+        flex-direction: column;
+    }
+}
+@media (max-width: 1024px) {
+    .cards-container2 {
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .cards-container2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+.titulo6 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #fdfdfd;
+    margin-left: 2.5rem;
+    font-family: Raleway;
+}
+.meioCard4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(255, 196, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 3px hidden rgb(255, 196, 0);
+}
+.meioCard3 {
+    background-color: rgb(54, 246, 6);
+    border: 3px hidden rgb(29, 255, 4);
+}
+.containerHomeAss{
+    background-image: url('./components/images/backgrounds/Checkout.svg');
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+}
+.horizontal-line2 {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 16px 0;
+    width: 55%;
+}
+
+.buttonEscolha2 {
+    width: 70%;
+    height: 3em;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 1em;
+    color: red;
 }

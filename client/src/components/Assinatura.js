@@ -33,7 +33,7 @@ class Assinatura extends Component {
                                     symbol: "ETH",
                                     decimals: 18
                                 },
-                               rpcUrls: ["https://sepolia-rollup.arbitrum.io/rpc"],
+                                rpcUrls: ["https://sepolia-rollup.arbitrum.io/rpc"],
                                 blockExplorerUrls: ["https://explorer.arbitrum.io/"],
                             }]
                         });
@@ -47,12 +47,12 @@ class Assinatura extends Component {
                 // Criar e enviar a transação
                 const tx = await signer.sendTransaction({
                     to: "0x7d2e47076043786803b2258511359C3C198c3b73",  // Substitua pelo contrato real
-                    value: parseEther("0.0001"), 
+                    value: parseEther("0.0001"),
                 });
 
                 console.log("Transação enviada! Hash:", tx.hash);
 
-                const receipt = await tx.wait(); 
+                const receipt = await tx.wait();
                 if (receipt.status === 1) {
                     window.location.href = '/home';
                 } else {
@@ -68,7 +68,7 @@ class Assinatura extends Component {
 
     render() {
         return (
-            <div className='containerHomeG'>
+            <div className='containerHomeAss'>
                 <div className="menu-container">
                     <div className="logo-container">
                         <Link to="/home">
@@ -82,28 +82,33 @@ class Assinatura extends Component {
                     </div>
                 </div>
                 <div className="content-container">
-                    <center>
-                        <h1 className="title">Formas de Pagamento</h1>
-                    </center>
-                    <hr className="horizontal-line" />
-                    <center>
-                        <div className="tracks-container-2">
-                            <div className="track-card" onClick={this.connectMetaMaskAndPay}>
-                                <img src={onchain} className="track-icon2" alt="onchain"/>
-                                <br/>
-                                <p className="track-name">OnChain</p>
-                                <p className="track-name">ETH 0,001</p>
-                            </div>
-                            <div className="track-card">
-                                <img src={pix} className="track-icon2" alt="pix"/>
-                                <br/>
-                                <p className="track-name">PIX</p>
-                                <p className="track-name">R$ 150,00</p>
-                            </div>
+                    <h1 className="title">Formas de Pagamento</h1>
+                    <hr className="horizontal-line2"/>
+                    <div className="cards-container2">
+                        <div className="card">
+                            <div className='meioCard4'>
+                                <img src={onchain} alt="Programação" className="card-image" />
+                            </div> 
+                            <p className='textT'>OnChain</p>
+                            <p className="titulo6">ETH 000.1</p>
+                            <Link onClick={this.connectMetaMaskAndPay}>
+                                <button className='buttonEscolha'>Comprar</button>
+                            </Link>
                         </div>
-                    </center>
+
+                        <div className="card">
+                            <div className='meioCard4 meioCard3'>
+                                <img src={pix} alt="Finanças" className="card-image" />
+                            </div>
+                            <p className='textT'>Pix</p>
+                            <p className="titulo6">R$20.00</p>
+                            <Link>
+                                <button className='buttonEscolha2'>Em Breve</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div >
         )
     }
 };

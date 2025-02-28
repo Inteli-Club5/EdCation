@@ -69,7 +69,7 @@ const Conta = () => {
                 <div className="tracks-container">
                     <div className="track-card" onClick={() => setModalCertificadoOpen(true)}>
                         <img src={certificado} className="track-icon-3" alt="Certificado" />
-                        <br/>
+                        <br />
                         <p className="track-name">Certificado</p>
                         <p className="access-link access-2">Arbitrum</p>
                     </div>
@@ -83,7 +83,7 @@ const Conta = () => {
                 <div className="tracks-container">
                     <div className="track-card" onClick={() => setModalRecompensaOpen(true)}>
                         <img src={arte} className="track-icon-3" alt="Recompensa" />
-                        <br/>
+                        <br />
                         <p className="track-name">Arte</p>
                         <p className="access-link access-2">Scroll</p>
                     </div>

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 
-html, body {
+html,
+body {
     background-color: #f5f5f5;
     color: #333;
     font-family: 'Raleway', sans-serif;
@@ -20,6 +21,7 @@ html, body {
     background-position: center;
     justify-content: flex-end;
 }
+
 .containerReg {
     display: flex;
     width: 100%;
@@ -39,6 +41,7 @@ html, body {
     align-items: center;
     padding: 2rem;
 }
+
 .metadeReg {
     display: flex;
     flex-direction: column;
@@ -57,12 +60,13 @@ html, body {
     padding: 2rem;
     background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
-.cadastroMeio{
+
+.cadastroMeio {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -71,11 +75,12 @@ html, body {
     background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid;
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
+
 .content-titulo {
     justify-content: left;
     width: 82%;
@@ -88,6 +93,7 @@ html, body {
     color: #fdfdfd;
     margin-bottom: 1em;
 }
+
 .titulo3 {
     text-align: left;
     font-weight: bold;
@@ -95,6 +101,7 @@ html, body {
     color: #fdfdfd;
     margin-bottom: 0.5em;
 }
+
 .titulo2 {
     text-align: left;
     font-weight: bold;
@@ -104,13 +111,12 @@ html, body {
     margin-left: 2rem;
     font-family: Raleway;
 }
+
 .container-caixadetexto {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 2rem;
-    justify-content: center;
-    align-items: center;
 }
 
 .textforbox {
@@ -118,16 +124,22 @@ html, body {
     font-family: Raleway;
     font-weight: bold;
     font-size: 12px;
+    align-self: flex-start;
+    /* Alinha a caixa de texto à esquerda */
+    text-align: left;
+    /* Alinha o texto dentro da caixa à esquerda */
 }
 
+
+
 .caixadetexto {
-    width: 82%;
+    width: 80%;
     height: 5.5vh;
     border: 0.1px solid #ddd;
     border-radius: 8px;
-    font-size: 1vw;
+    font-size: 16px;
     background-color: #26262640;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     color: white;
 }
 
@@ -158,26 +170,54 @@ html, body {
 .container-botoes a {
     width: 85%;
     text-decoration: none;
-   
+
 }
+
+/* Container principal */
 /* Container principal */
 .div-rank {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: auto;
     width: 80%;
+    max-width: 900px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 /* Subcontainer */
 .div-rank2 {
     display: flex;
     flex-direction: column;
-    height: 90%;
     width: 70%;
+    max-width: 800px;
+    background-color: gold;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cada item do ranking */
+/* Container principal */
+.div-rank {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    max-width: 900px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Subcontainer */
+.div-rank2 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 800px;
     background-color: gold;
     padding: 20px;
     border-radius: 10px;
@@ -186,72 +226,49 @@ html, body {
 /* Cada item do ranking */
 .rank {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 780px; /* Limita o tamanho máximo */
-    height: 10%;
-    min-height: 50px; /* Para evitar que fique muito pequeno */
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    max-width: 780px;
+    min-height: 50px;
     background: linear-gradient(to bottom, #2E2E2E, #13131340);
     border: 1px solid rgba(201, 198, 198, 0.497);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1%;
     align-items: center;
     padding: 10px;
+    gap: 10px;
 }
 
-/* Parte 1 do ranking */
-.rank-part1 {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    padding: 0.5em;
-    align-items: center;
-}
-
-/* Parte 2 do ranking (ajustada para mobile) */
+/* Partes do ranking */
+.rank-part1,
 .rank-part2 {
     display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 100%;
-    padding: 0.5em;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 0.5em;
+    gap: 10px;
 }
 
 /* Ícones */
-.iconeJ {
-    margin-left: 1.5em;
+.iconeJ,
+.iconeJ2 {
     width: 40px;
     height: 40px;
+    transition: all 0.3s ease;
 }
 
 .iconeUser {
-    margin-left: 1.5em;
     width: 120px;
     height: auto;
+    transition: all 0.3s ease;
 }
 
-.iconeJ2 {
-    margin-right: 1em;
-    width: 40px;
-    height: 40px;
-}
-
-
-
-/* 📱 Ajustes para telas médias */
+/* 🔹 Ajustes para tablets */
 @media (max-width: 768px) {
-    .question-container{
-        margin-top: 10em;
-    }
     .div-rank {
         width: 90%;
-        height: auto;
     }
 
     .div-rank2 {
@@ -261,21 +278,14 @@ html, body {
 
     .rank {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        height: auto;
-        padding: 15px;
+        padding: 12px;
     }
 
-    .rank-part1, .rank-part2 {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .iconeJ, .iconeJ2 {
+    .iconeJ,
+    .iconeJ2 {
         width: 35px;
         height: 35px;
-        margin: 5px;
     }
 
     .iconeUser {
@@ -283,10 +293,11 @@ html, body {
     }
 }
 
-/* 📱📱 Ajustes para telas pequenas (celulares) */
+/* 🔹 Ajustes para celulares */
 @media (max-width: 480px) {
     .div-rank {
         width: 100%;
+        max-width: 400px;
     }
 
     .div-rank2 {
@@ -296,11 +307,11 @@ html, body {
 
     .rank {
         flex-direction: column;
-        height: auto;
         padding: 10px;
     }
 
-    .iconeJ, .iconeJ2 {
+    .iconeJ,
+    .iconeJ2 {
         width: 30px;
         height: 30px;
     }
@@ -309,6 +320,9 @@ html, body {
         width: 90px;
     }
 }
+
+
+
 .botao-login {
     width: 100%;
     height: 6vh;
@@ -330,6 +344,7 @@ html, body {
 .botao-login2 {
     background-color: rgb(148, 244, 4)
 }
+
 .botao-login3 {
     border: 0.2px solid white;
     background-color: rgb(148, 244, 4);
@@ -341,23 +356,27 @@ html, body {
 }
 
 
-.white{
+.white {
     color: white;
 }
+
 .logo {
     height: 40px;
 }
-.tokensNum{
+
+.tokensNum {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     margin-right: 2em;
     color: #08a9f4;
 }
+
 .profile-image {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
+
 .rankingGeral {
     display: flex;
     flex-direction: row;
@@ -404,7 +423,8 @@ html, body {
     justify-content: center;
     width: 35vh;
     height: 40vh;
-    max-width: 300px;  /* Máximo de 300px para telas grandes */
+    max-width: 300px;
+    /* Máximo de 300px para telas grandes */
     min-width: 160px;
     min-height: 220px;
     background-color: #f5f5f5;
@@ -413,8 +433,8 @@ html, body {
     transition: transform 0.2s;
     cursor: pointer;
     background: linear-gradient(to bottom, #2E2E2E, #13131340);
-    border:1px solid rgba(201, 198, 198, 0.497);
-    
+    border: 1px solid rgba(201, 198, 198, 0.497);
+
 }
 
 .track-card:hover {
@@ -446,6 +466,9 @@ html, body {
 .centraliza {
     font-size: 14px;
     margin-top: 8px;
+    word-wrap: break-word;
+    /* Permite que textos longos quebrem corretamente */
+    overflow-wrap: break-word;
 }
 
 .progress-bar-container {
@@ -459,9 +482,11 @@ html, body {
 
 .progress-bar {
     height: 100%;
-    background-color: #00fc08; /* Cor verde para progresso */
+    background-color: #00fc08;
+    /* Cor verde para progresso */
     transition: width 0.5s ease-in-out;
 }
+
 .access {
     color: rgb(3, 255, 3);
 }
@@ -474,47 +499,10 @@ html, body {
     color: red;
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.modal-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-
-.modal-button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #3498db;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.modal-button:hover {
-    background-color: #2980b9;
-}
-.CorTroca{
+.CorTroca {
     background-color: rgba(35, 34, 34, 0.853);
 }
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -525,15 +513,22 @@ html, body {
 }
 
 .escolha-container {
-    
-    min-height: 100vh; /* Ocupa pelo menos 100% da altura da tela */
-    height: 100%;
+    min-height: 100vh;
+    /* Ocupa pelo menos 100% da altura da tela */
+    width: 100%;
+    /* Ocupa toda a largura */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* Centraliza verticalmente */
     padding: 40px;
     background-image: url('./components/images/backgrounds/trilha.png');
+    /* Ajusta o tamanho da imagem sem distorcer */
+    /* Evita repetição da imagem */
 }
+
+
 
 .escolha-title {
     font-size: 3rem;
@@ -542,18 +537,22 @@ html, body {
     font-family: Raleway;
     font-weight: bold;
 }
-.gradient{
-    background-image: linear-gradient(to right,#8AA2FD, #59FF00);
+
+.gradient {
+    background-image: linear-gradient(to right, #8AA2FD, #59FF00);
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .cards-container {
     margin-top: 10vh;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: auto; /* Ajusta automaticamente */
-    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    height: auto;
+    /* Ajusta automaticamente */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha */
     gap: 40px;
 }
 
@@ -561,9 +560,11 @@ html, body {
 .card {
     display: flex;
     flex-direction: column;
-    height: 65vh;
-    width: 20%; /* Tamanho ajustado */
-    max-width: 90%; /* Evita que fiquem muito grandes */
+    height: 60vh;
+    width: 20%;
+    /* Tamanho ajustado */
+    max-width: 90%;
+    /* Evita que fiquem muito grandes */
     background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -606,6 +607,7 @@ html, body {
     background-color: rgb(12, 7, 143);
     border: 3px hidden rgb(12, 7, 143);
 }
+
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -624,7 +626,8 @@ html, body {
     text-decoration: none;
     color: inherit;
 }
-.textT{
+
+.textT {
     font-family: Raleway;
     font-size: 1em;
     margin: 1em;
@@ -634,7 +637,7 @@ html, body {
     text-align: justify;
 }
 
-.textT2{
+.textT2 {
     font-family: Raleway;
     font-size: 1em;
     margin-top: 1em;
@@ -647,11 +650,12 @@ html, body {
         gap: 30px;
     }
 
-    .tracks-container{
+    .tracks-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -665,8 +669,13 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    
+    .card {
+        height: 47vh;
+    }
 
+    .meioCard {
+        height: 30%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -678,7 +687,8 @@ html, body {
         width: 80px;
         height: 80px;
     }
-    .titulo2{
+
+    .titulo2 {
         font-size: 1.5em;
     }
 }
@@ -701,22 +711,53 @@ html, body {
 }
 
 .content-perfil {
-    margin-top: 2%;
-}
-
-/* Perfil */
-.content-perfil {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 20px;
+    width: 100%;
+    max-width: 90%;
+    /* Evita que o conteúdo ultrapasse a tela */
+    padding: 10px;
+    box-sizing: border-box;
+    /* Garante que o padding não afete o tamanho total */
 }
 
+/* Ajustando cada detalhe do perfil */
 .profile-detail {
     font-size: 16px;
     color: #ffffff;
     padding: 8px;
     border-radius: 6px;
+    word-wrap: break-word;
+    /* Permite que textos longos quebrem corretamente */
+    overflow-wrap: break-word;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content-perfil {
+        max-width: 95%;
+        font-size: 14px;
+        /* Reduz levemente o tamanho da fonte em telas menores */
+    }
+
+    .profile-detail {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-perfil {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .profile-detail {
+        font-size: 13px;
+        padding: 5px;
+    }
 }
 
 .logout-container {
@@ -759,7 +800,7 @@ html, body {
 
 .modal-content {
     background: linear-gradient(to bottom, #2E2E2E, #131313);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     padding: 30px;
     border-radius: 10px;
     width: 500px;
@@ -767,7 +808,7 @@ html, body {
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     color: white;
-    
+
 }
 
 .modal-content h2 {
@@ -851,10 +892,11 @@ html, body {
     align-items: center;
 }
 
-.tituloModal2{
+.tituloModal2 {
     color: white;
 }
-.lightgreen{
+
+.lightgreen {
     color: rgb(148, 244, 4);
 }
 
@@ -903,15 +945,18 @@ html, body {
 .score {
     margin-top: 20px;
 }
-.tituloQuestion{
+
+.tituloQuestion {
     font-weight: bold;
 }
+
 .tokensImag {
     width: 40px;
     height: 40px;
     margin-right: 1em;
 }
-.buttonEscolha{
+
+.buttonEscolha {
     width: 70%;
     height: 3em;
     border-radius: 10px;
@@ -920,37 +965,48 @@ html, body {
     font-size: 14px;
     margin-top: 1em;
 }
-.containerHome{
+
+.containerHome {
     background-image: url('./components/images/backgrounds/Tracks.png');
     height: 100%;
     width: 100%;
 }
 
-.ajusteMeio{
+.ajusteMeio {
     width: 90%;
     justify-content: center;
     align-items: center;
     justify-items: center;
 }
-.perfil-geral{
+
+.perfil-geral {
     background-color: black;
-    background-image: url('./components/images/backgrounds/Tracks.png');;
+    background-image: url('./components/images/backgrounds/Tracks.png');
+    height: 100vh;
+    /* Garante que ocupe toda a altura da tela */
+    min-height: 100vh;
+    /* Evita cortes em alguns navegadores */
+    overflow: hidden;
 }
+
 /* Responsividade */
 @media (max-width: 1224px) {
-    .cards-container{
+    .cards-container {
         flex-direction: column;
     }
-    .track-card{
+
+    .track-card {
         min-width: 160px;
         min-height: 220px;
     }
 }
+
 @media (max-width: 768px) {
-   
+
     .metade {
         width: 100%;
     }
+
     .metadeReg {
         width: 100%;
     }
@@ -958,6 +1014,7 @@ html, body {
     .loginMeio {
         width: 90%;
     }
+
     .registroMeio {
         width: 90%;
     }
@@ -999,20 +1056,23 @@ html, body {
     .start-button {
         width: 80%;
     }
-    .containerLog{
+
+    .containerLog {
         background-image: none;
         background-color: rgb(22, 22, 22);
     }
-    .containerReg{
+
+    .containerReg {
         background-image: none;
         background-color: rgb(22, 22, 22);
     }
 }
 
 @media (max-width: 480px) {
-    .cards-container{
+    .cards-container {
         flex-direction: column;
     }
+
     .metade {
         width: 100%;
         padding: 1rem;
@@ -1022,6 +1082,7 @@ html, body {
         width: 100%;
         padding: 1rem;
     }
+
     .registroMeio {
         width: 100%;
         padding: 1rem;
@@ -1069,11 +1130,13 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Limita o tamanho máximo do player */
-    margin: 20px auto; /* Centraliza na tela */
+    max-width: 800px;
+    /* Limita o tamanho máximo do player */
+    margin: 20px auto;
+    /* Centraliza na tela */
     padding: 10px;
- 
-   
+
+
 }
 
 /* Garante que o iframe do YouTube seja responsivo */
@@ -1082,7 +1145,8 @@ html, body {
     height: 450px;
     border-radius: 10px;
 }
-.div-center{
+
+.div-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1090,11 +1154,13 @@ html, body {
     width: 80%;
     justify-self: center;
 }
+
 .lessons-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 780px; /* Limita o tamanho máximo do player */
+    max-width: 780px;
+    /* Limita o tamanho máximo do player */
     height: 40%;
     background-color: #f5f5f5;
     border-radius: 8px;
@@ -1102,69 +1168,70 @@ html, body {
     transition: transform 0.2s;
     cursor: pointer;
     background: linear-gradient(to bottom, #2E2E2E, #13131340);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     padding: 3em;
     margin-bottom: 2%;
-    
+
 }
-.containerHomeG{
+
+.containerHomeG {
     background-image: url('./components/images/backgrounds/FundoG.png');
     height: 100%;
     min-height: 100vh;
 }
+
+.div-buttonsL {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+    gap: 10px;
+}
+
+.next-button,
+.prev-button {
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+    max-width: 45%;
+}
+
+/* Botão "Próxima" */
 .next-button {
     background-color: rgb(148, 244, 4);
     color: white;
-    margin-top: 5%;
-    width: 30%;
-    font-size: 16px;
-    font-family: Raleway;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    justify-self: flex-end;
-}
-.prev-button {
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 0, 0);
-    margin-top: 5%;
-    width: 30%;
-    font-size: 16px;
-    font-family: Raleway;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    justify-self: flex-start;
 }
 
 .next-button:hover {
-    background-color: #0056b3;
+    background-color: #82c302;
 }
 
 .next-button:active {
-    background-color: #004494;
+    background-color: #6aa002;
 }
+
+/* Botão "Anterior" */
+.prev-button {
+    background-color: white;
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+}
+
 .prev-button:hover {
-    background-color: #ff0000;
+    background-color: rgb(255, 0, 0);
     color: white;
 }
 
-.prev-button:active {
-    background-color: #ff0303;
-    color: white;
-}
-.div-buttonsL{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 50%;
-}
 /* Para tornar o vídeo mais responsivo em telas menores */
 @media (max-width: 768px) {
     .video-container {
@@ -1181,10 +1248,12 @@ html, body {
         height: 200px;
     }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 
-html, body {
+html,
+body {
     background-color: #f5f5f5;
     color: #333;
     font-family: 'Raleway', sans-serif;
@@ -1203,6 +1272,7 @@ html, body {
     background-position: center;
     justify-content: flex-end;
 }
+
 .containerReg {
     display: flex;
     width: 100%;
@@ -1222,6 +1292,7 @@ html, body {
     align-items: center;
     padding: 2rem;
 }
+
 .metadeReg {
     display: flex;
     flex-direction: column;
@@ -1240,12 +1311,13 @@ html, body {
     padding: 2rem;
     background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
-.cadastroMeio{
+
+.cadastroMeio {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -1254,11 +1326,12 @@ html, body {
     background: linear-gradient(to bottom, #373737c3, #2e2e2ec3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid;
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     border-radius: 10px;
     align-items: center;
     justify-content: center;
 }
+
 .content-titulo {
     justify-content: left;
     width: 82%;
@@ -1271,6 +1344,7 @@ html, body {
     color: #fdfdfd;
     margin-bottom: 3vh;
 }
+
 .titulo2 {
     text-align: left;
     font-weight: bold;
@@ -1280,6 +1354,7 @@ html, body {
     margin-left: 2rem;
     font-family: Raleway;
 }
+
 .container-caixadetexto {
     display: flex;
     flex-direction: column;
@@ -1303,7 +1378,7 @@ html, body {
     border-radius: 8px;
     font-size: 1vw;
     background-color: #26262640;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     color: white;
 }
 
@@ -1334,7 +1409,7 @@ html, body {
 .container-botoes a {
     width: 85%;
     text-decoration: none;
-   
+
 }
 
 .botao-login {
@@ -1358,6 +1433,7 @@ html, body {
 .botao-login2 {
     background-color: rgb(148, 244, 4)
 }
+
 .botao-login3 {
     border: 0.2px solid white;
     background-color: rgb(148, 244, 4);
@@ -1372,7 +1448,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 20px;
     background-color: #1F1F1F;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1472,9 +1548,11 @@ html, body {
 
 .progress-bar {
     height: 100%;
-    background-color: #00fc08; /* Cor verde para progresso */
+    background-color: #00fc08;
+    /* Cor verde para progresso */
     transition: width 0.5s ease-in-out;
 }
+
 .access {
     color: rgb(3, 255, 3);
 }
@@ -1525,9 +1603,11 @@ html, body {
 .modal-button:hover {
     background-color: #2980b9;
 }
-.CorTroca{
+
+.CorTroca {
     background-color: rgba(35, 34, 34, 0.853);
 }
+
 .close-button {
     position: absolute;
     top: 10px;
@@ -1537,16 +1617,6 @@ html, body {
     color: #333;
 }
 
-.escolha-container {
-    
-    min-height: 100vh; /* Ocupa pelo menos 100% da altura da tela */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    background-image: url('./components/images/backgrounds/trilha.png');
-}
 
 .escolha-title {
     font-size: 3rem;
@@ -1555,43 +1625,26 @@ html, body {
     font-family: Raleway;
     font-weight: bold;
 }
-.gradient{
-    background-image: linear-gradient(to right,#8AA2FD, #59FF00);
+
+.gradient {
+    background-image: linear-gradient(to right, #8AA2FD, #59FF00);
     -webkit-background-clip: text;
     color: transparent;
 }
+
 .cards-container {
     margin-top: 10vh;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: auto; /* Ajusta automaticamente */
-    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    height: auto;
+    /* Ajusta automaticamente */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha */
     gap: 40px;
 }
 
-/* Estilo do card */
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    width: 20%; /* Tamanho ajustado */
-    max-width: 90%; /* Evita que fiquem muito grandes */
-    background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    padding-bottom: 20px;
-    border: 1px solid rgba(201, 198, 198, 0.497);
-}
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 
 /* Ajuste da imagem dentro do card */
 .card-image {
@@ -1614,14 +1667,15 @@ html, body {
     font-size: 24vw;
     color: #555;
     margin: 0;
-    text-decoration: none;
+    text-decocardration: none;
 }
 
 .cards-container a {
     text-decoration: none;
     color: inherit;
 }
-.textT{
+
+.textT {
     font-family: Raleway;
     font-size: 1em;
     margin: 1em;
@@ -1630,7 +1684,8 @@ html, body {
     color: #bebcbc;
     text-align: justify;
 }
-.textT2{
+
+.textT2 {
     font-family: Raleway;
     font-size: 1em;
     margin-top: 1em;
@@ -1647,6 +1702,10 @@ html, body {
     .card {
         width: 240px;
     }
+
+    .card2 {
+        width: 240px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1661,6 +1720,11 @@ html, body {
         max-width: 300px;
     }
 
+    .card2 {
+        width: 80%;
+        max-width: 300px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1668,11 +1732,16 @@ html, body {
         width: 90%;
     }
 
+    .card2 {
+        width: 90%;
+    }
+
     .card-image {
         width: 80px;
         height: 80px;
     }
-    .titulo2{
+
+    .titulo2 {
         font-size: 1.5em;
     }
 }
@@ -1694,24 +1763,6 @@ html, body {
     align-self: center;
 }
 
-.content-perfil {
-    margin-top: 2%;
-}
-
-/* Perfil */
-.content-perfil {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.profile-detail {
-    font-size: 16px;
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 6px;
-}
 
 .logout-container {
     margin-top: 20px;
@@ -1753,7 +1804,7 @@ html, body {
 
 .modal-content {
     background: linear-gradient(to bottom, #2E2E2E, #131313);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     padding: 30px;
     border-radius: 10px;
     width: 500px;
@@ -1761,7 +1812,7 @@ html, body {
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     color: white;
-    
+
 }
 
 .modal-content h2 {
@@ -1848,12 +1899,14 @@ html, body {
     align-items: center;
 }
 
-.tituloModal2{
+.tituloModal2 {
     color: white;
 }
-.lightgreen{
+
+.lightgreen {
     color: rgb(148, 244, 4);
 }
+
 /* App.css */
 .quiz-container {
     display: flex;
@@ -1862,6 +1915,17 @@ html, body {
     height: 100%;
     padding: 20px;
     text-align: center;
+}
+
+.quiz-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10%;
+    justify-content: center;
 }
 
 .question-container {
@@ -1914,7 +1978,8 @@ html, body {
     width: 40px;
     height: 40px;
 }
-.buttonEscolha{
+
+.buttonEscolha {
     width: 70%;
     height: 3em;
     border-radius: 10px;
@@ -1923,31 +1988,30 @@ html, body {
     font-size: 14px;
     margin-top: 1em;
 }
-.containerHome{
+
+.containerHome {
     background-image: url('./components/images/backgrounds/Tracks.png');
     height: 100%;
     width: 100%;
 }
 
-.ajusteMeio{
+.ajusteMeio {
     width: 90%;
     justify-content: center;
     align-items: center;
     justify-items: center;
 }
-.perfil-geral{
-    background-color: black;
-    background-image: url('./components/images/backgrounds/Tracks.png');;
-}
+
+
 /* Responsividade */
-@media (max-width: 1024px) {
-   
-}
+@media (max-width: 1024px) {}
+
 @media (max-width: 768px) {
-   
+
     .metade {
         width: 100%;
     }
+
     .metadeReg {
         width: 100%;
     }
@@ -1955,6 +2019,7 @@ html, body {
     .loginMeio {
         width: 90%;
     }
+
     .registroMeio {
         width: 90%;
     }
@@ -1995,20 +2060,23 @@ html, body {
     .start-button {
         width: 80%;
     }
-    .containerLog{
+
+    .containerLog {
         background-image: none;
         background-color: rgb(22, 22, 22);
     }
-    .containerReg{
+
+    .containerReg {
         background-image: none;
         background-color: rgb(22, 22, 22);
     }
 }
 
 @media (max-width: 480px) {
-    .cards-container{
+    .cards-container {
         flex-direction: column;
     }
+
     .metade {
         width: 100%;
         padding: 1rem;
@@ -2018,6 +2086,7 @@ html, body {
         width: 100%;
         padding: 1rem;
     }
+
     .registroMeio {
         width: 100%;
         padding: 1rem;
@@ -2064,11 +2133,13 @@ html, body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Limita o tamanho máximo do player */
-    margin: 20px auto; /* Centraliza na tela */
+    max-width: 800px;
+    /* Limita o tamanho máximo do player */
+    margin: 20px auto;
+    /* Centraliza na tela */
     padding: 10px;
- 
-   
+
+
 }
 
 /* Garante que o iframe do YouTube seja responsivo */
@@ -2077,7 +2148,8 @@ html, body {
     height: 450px;
     border-radius: 10px;
 }
-.div-center{
+
+.div-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2085,11 +2157,13 @@ html, body {
     width: 80%;
     justify-self: center;
 }
+
 .lessons-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 780px; /* Limita o tamanho máximo do player */
+    max-width: 780px;
+    /* Limita o tamanho máximo do player */
     height: 40%;
     background-color: #f5f5f5;
     border-radius: 8px;
@@ -2097,27 +2171,71 @@ html, body {
     transition: transform 0.2s;
     cursor: pointer;
     background: linear-gradient(to bottom, #2E2E2E, #13131340);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
     padding: 3em;
     margin-bottom: 2%;
-    
+
 }
-.logo2 {
-    height: 25px;
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Garante que os elementos fiquem bem distribuídos */
+    width: 100%;
+    padding: 10px 5%;
+    box-sizing: border-box;
 }
-.logo-container{
-    flex-direction: row;
+
+/* Ajustando os containers */
+.logo-container {
     display: flex;
     align-items: center;
     width: 20%;
+    min-width: 120px;
 }
 
 .logo-container2 {
     display: flex;
-    width: 100%; /* Certifique-se de que ocupa toda a largura disponível */
-    margin-right: 30vh;
-    text-decoration: none;
+    justify-content: center;
+    /* Centraliza o conteúdo */
+    width: 100%;
+    text-align: center;
 }
+
+/* Centraliza o título */
+.titulo4 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Ajuste para o perfil */
+.profile-container {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    min-width: 80px;
+    justify-content: flex-end;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .logo-container,
+    .profile-container {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
 
 .titulo4 {
     font-weight: bold;
@@ -2128,44 +2246,65 @@ html, body {
 }
 
 .titulo4 a {
-    text-decoration: none; /* Garante que o link não tenha underline */
+    text-decoration: none;
+    /* Garante que o link não tenha underline */
 }
 
 .titulo4:hover {
     transition: 0.5s;
-    color:rgb(210, 199, 199);
-    text-decoration: none; /* Garante que o hover também não tenha underline */
+    color: rgb(210, 199, 199);
+    text-decoration: none;
+    /* Garante que o hover também não tenha underline */
 }
 
 .no-effect {
     text-decoration: none;
+    justify-self: center;
 }
 
 .no-effect:hover {
     text-decoration: none;
 }
+
+.logo2 {
+    height: 25px;
+}
+
+.logo-container {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
 .cards-container2 {
     margin-top: 10vh;
     display: flex;
     width: 100%;
-    height: auto; /* Ajusta automaticamente */
-    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    height: auto;
+    /* Ajusta automaticamente */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha */
     gap: 40px;
 }
+
 .cards-container2 a {
     text-decoration: none;
     color: inherit;
 }
+
 @media (max-width: 480px) {
-    .cards-container2{
+    .cards-container2 {
         flex-direction: column;
     }
 }
+
 @media (max-width: 1024px) {
     .cards-container2 {
         gap: 30px;
     }
 }
+
 @media (max-width: 768px) {
     .cards-container2 {
         flex-direction: column;
@@ -2173,6 +2312,7 @@ html, body {
         gap: 20px;
     }
 }
+
 .titulo6 {
     text-align: left;
     font-weight: bold;
@@ -2181,6 +2321,7 @@ html, body {
     margin-left: 2.5rem;
     font-family: Raleway;
 }
+
 .meioCard4 {
     display: flex;
     flex-direction: column;
@@ -2193,16 +2334,19 @@ html, body {
     align-items: center;
     border: 3px hidden rgb(255, 196, 0);
 }
+
 .meioCard3 {
     background-color: rgb(54, 246, 6);
     border: 3px hidden rgb(29, 255, 4);
 }
-.containerHomeAss{
+
+.containerHomeAss {
     background-image: url('./components/images/backgrounds/Checkout.svg');
     background-size: cover;
     height: 100%;
     min-height: 100vh;
 }
+
 .horizontal-line2 {
     border: none;
     border-top: 2px solid #ddd;
@@ -2220,6 +2364,7 @@ html, body {
     margin-top: 1em;
     color: red;
 }
+
 .track-card2 {
     display: flex;
     flex-direction: column;
@@ -2234,7 +2379,7 @@ html, body {
     transition: transform 0.2s;
     cursor: pointer;
     background: linear-gradient(to bottom, #2E2E2E, #13131340);
-    border:1px solid rgba(201, 198, 198, 0.497);
+    border: 1px solid rgba(201, 198, 198, 0.497);
 }
 
 .track-card2:hover {
@@ -2253,7 +2398,8 @@ html, body {
     font-size: 1.5em;
     color: #ffffff;
 }
-.buttonComprar{
+
+.buttonComprar {
     width: 70%;
     height: 3em;
     border-radius: 10px;
@@ -2265,6 +2411,7 @@ html, body {
     color: white;
     margin-bottom: 1em;
 }
+
 .titulo7 {
     text-align: left;
     font-weight: bold;
@@ -2273,7 +2420,8 @@ html, body {
     border-radius: 0.5em;
     justify-self: center;
 }
-.RecTok{
+
+.RecTok {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -2286,26 +2434,34 @@ html, body {
     margin-bottom: 24px;
     color: #fffefe;
 }
-.tokem{
+
+.tokem {
     display: flex;
     flex-direction: row;
-    align-self: flex-end; /* Funciona dentro de um flex container */
-    justify-self: flex-end; /* Não tem efeito aqui */
-    margin-top: auto; /* Empurra para o final do contêiner pai */
+    align-self: flex-end;
+    /* Funciona dentro de um flex container */
+    justify-self: flex-end;
+    /* Não tem efeito aqui */
+    margin-top: auto;
+    /* Empurra para o final do contêiner pai */
 }
 
 .token-container {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
+    align-items: center;
+    /* Alinha verticalmente */
     justify-content: center;
-    gap: 5px; /* Espaço entre o ícone e o texto */
+    gap: 5px;
+    /* Espaço entre o ícone e o texto */
 }
 
 .token-icon {
-    width: 25px; /* Define um tamanho pequeno */
+    width: 25px;
+    /* Define um tamanho pequeno */
     height: 25px;
     margin-bottom: 3px;
-    object-fit: contain; /* Mantém a proporção */
+    object-fit: contain;
+    /* Mantém a proporção */
 }
 
 .gold {
@@ -2313,19 +2469,90 @@ html, body {
 }
 
 .buttonComprar3 {
-    width: 15%;
+    width: 15vw;
+    /* Usa viewport width para melhor responsividade */
+    max-width: 200px;
+    /* Limita o tamanho máximo */
+    min-width: 120px;
+    /* Garante um tamanho mínimo */
     height: 4em;
     border-radius: 10px;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1rem;
+    /* Usa unidades relativas para melhor escalabilidade */
     margin-top: 1em;
     background-color: #28a745;
     color: white;
     margin-bottom: 1em;
-    transition: transform 0.3s ease-in-out; /* Adicionando a transição suave */
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    padding: 0.5em 1em;
+    text-align: center;
+    cursor: pointer;
+    border: none;
 }
 
+/* Efeito hover */
 .buttonComprar3:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+    transform: scale(1.1);
+    background-color: #218838;
+    /* Um verde um pouco mais escuro para feedback visual */
+}
+
+/* 🔹 Ajustes para tablets */
+@media (max-width: 768px) {
+    .buttonComprar3 {
+        width: 20vw;
+        max-width: 180px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 🔹 Ajustes para celulares */
+@media (max-width: 480px) {
+    .buttonComprar3 {
+        width: 60%;
+        font-size: 1.5rem;
+        height: 3.5em;
+    }
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    height: 42vh;
+    width: 20%;
+    /* Tamanho ajustado */
+    max-width: 90%;
+    /* Evita que fiquem muito grandes */
+    background: linear-gradient(to bottom, #3737378a, #2e2e2e7a);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 20px;
+    border: 1px solid rgba(201, 198, 198, 0.497);
+}
+
+.card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .card2 {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .card2 {
+        width: 80%;
+        max-width: 300px;
+    }
+
 }

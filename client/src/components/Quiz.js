@@ -88,8 +88,8 @@ function Quiz() {
                     </Link>
                 </div>
             </div>
-            <div className="quiz-container">
-                <img src={arbitrum} className="track-icon-3"/>
+            <div className="quiz-container2">
+                <img src={arbitrum} className="track-icon-3" />
                 <div className="question-container">
                     <h2 className='tituloQuestion white'>{question.question}</h2>
                 </div>
@@ -112,14 +112,14 @@ function Quiz() {
                 </div>
 
                 {/* Exibe o timer no canto superior direito */}
-                <div className="timer white" style={{ position: 'absolute', top: 100, right: 30, fontSize: '20px' }}>
+                <div className="timer white" style={{ position: 'absolute', top: 120, right: 30, fontSize: '20px' }}>
                     {timeLeft} segundos
                 </div>
 
                 {/* Exibe os tokens no canto superior esquerdo */}
-                <div className="tokens white" style={{ position: 'absolute', top: 100, left: 30, fontSize: '20px',}}>
+                <div className="tokens white" style={{ position: 'absolute', top: 120, left: 30, fontSize: '20px', }}>
                     <img src={tokensI} className='tokensImag'></img>
-                     Tokens: <strong>{tokens}</strong>
+                    Tokens: <strong>{tokens}</strong>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ const PreStart = () => {
         <div className="escolha-container">
             <h1 className="escolha-title">Escolha o Tipo de <strong className='gradient'>Conta</strong></h1>
             <div className="cards-container">
-                <div className="card">
+                <div className="card2">
                     <div className='meioCard'>
                         <img src={profile} alt="Usuário" className="card-image" />
                     </div>
@@ -18,7 +18,7 @@ const PreStart = () => {
                         <button className='buttonEscolha'>Seguir</button>
                     </Link>
                 </div>
-                <div className="card">
+                <div className="card2">
                     <div className='meioCard meioCard2'>
                         <img src={empresa} alt="Empresa" className="card-image" />
                     </div>

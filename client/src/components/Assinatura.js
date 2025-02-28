@@ -101,7 +101,7 @@ class Assinatura extends Component {
                                 <img src={pix} alt="Finanças" className="card-image" />
                             </div>
                             <p className='textT'>Pix</p>
-                            <p className="titulo6">R$20.00</p>
+                            <p className="titulo6">R$ 20.00</p>
                             <Link>
                                 <button className='buttonEscolha2'>Em Breve</button>
                             </Link>

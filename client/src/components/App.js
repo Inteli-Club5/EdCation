@@ -17,8 +17,8 @@ class App extends Component {
                 <Routes>
                     <Route path="/" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
-                    <Route path="/pre-start" element={<PreStart/>}/> {/* Página para escolher o tipo de conta */}
-                    <Route path="/criar-conta" element={<CriarConta/>}/> {/* Página de cadastro */}
+                    <Route path="/pre-start" element={<PreStart/>}/> 
+                    <Route path="/criar-conta" element={<CriarConta/>}/> 
                     <Route path="/escolha" element={<Escolha/>}/>
                     <Route path="/conta" element={<Conta/>}/>
                     <Route path="/quiz" element={<Quiz/>}/>

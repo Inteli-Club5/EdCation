@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { BrowserProvider, parseEther } from "ethers";
 import logo from './images/edcation3.png';
 import profile from './images/profile.png';
 import pix from './images/pix.png';
@@ -12,29 +11,23 @@ class Assinatura extends Component {
     connectMetaMaskAndPay = async () => {
         if (typeof window.ethereum !== "undefined") {
             try {
-                const provider = new BrowserProvider(window.ethereum);
-                const accounts = await provider.send("eth_requestAccounts", []);
-                const signer = await provider.getSigner();
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const account = accounts[0];
+                console.log("Conectado com a conta:", account);
 
-                console.log("Conectado com a conta:", accounts[0]);
-
-                // Verifica se está na rede Arbitrum Sepolia
-                const network = await provider.getNetwork();
-                if (network.chainId !== 421614) {  // ID da Arbitrum Sepolia
+                // Verifica se está na rede Arbitrum Sepolia
+                const networkId = await window.ethereum.request({ method: 'eth_chainId' });
+                if (networkId !== '0x66eee') {  // ID da Arbitrum Sepolia
                     try {
                         // Adiciona a rede Arbitrum Sepolia ao MetaMask
                         await window.ethereum.request({
-                            method: "wallet_addEthereumChain",
+                            method: 'wallet_addEthereumChain',
                             params: [{
-                                chainId: "0x66eee", // ID da Arbitrum Sepolia
-                                chainName: "Arbitrum Sepolia",
-                                nativeCurrency: {
-                                    name: "ETH",
-                                    symbol: "ETH",
-                                    decimals: 18
-                                },
-                                rpcUrls: ["https://sepolia-rollup.arbitrum.io/rpc"],
-                                blockExplorerUrls: ["https://explorer.arbitrum.io/"],
+                                chainId: '0x66eee', // ID da Arbitrum Sepolia
+                                chainName: 'Arbitrum Sepolia',
+                                nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+                                rpcUrls: ['https://sepolia-rollup.arbitrum.io/rpc'],
+                                blockExplorerUrls: ['https://explorer.arbitrum.io/'],
                             }]
                         });
                     } catch (addError) {
@@ -44,25 +37,39 @@ class Assinatura extends Component {
                     }
                 }
 
-                // Criar e enviar a transação
-                const tx = await signer.sendTransaction({
-                    to: "0x7d2e47076043786803b2258511359C3C198c3b73",  // Substitua pelo contrato real
-                    value: parseEther("0.0001"),
+                // Parâmetros da transação
+                const transactionParameters = {
+                    to: '0x7d2e47076043786803b2258511359C3C198c3b73', // Substitua pelo contrato real
+                    from: account,
+                    value: '0x0D6E2F1A50000', // Equivalente a 0.0001 ETH em Wei
+                };
+
+                // Envia a transação
+                const txHash = await window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [transactionParameters],
                 });
 
-                console.log("Transação enviada! Hash:", tx.hash);
+                console.log("Transação enviada! Hash:", txHash);
 
-                const receipt = await tx.wait();
-                if (receipt.status === 1) {
-                    window.location.href = '/home';
-                } else {
-                    alert("Falha na transação.");
-                }
+                // Espera pela confirmação da transação
+                window.ethereum.request({
+                    method: 'eth_getTransactionReceipt',
+                    params: [txHash],
+                }).then((receipt) => {
+                    if (receipt && receipt.status === '0x1') {
+                        window.location.href = '/home';
+                    } else {
+                        alert("Falha na transação.");
+                    }
+                });
+
             } catch (error) {
                 console.error("Erro ao conectar ou transacionar:", error);
+                alert("Erro ao processar a transação.");
             }
         } else {
-            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
+            alert("MetaMask não encontrada. Instale a MetaMask para continuar.");
         }
     };
 
@@ -83,14 +90,14 @@ class Assinatura extends Component {
                 </div>
                 <div className="content-container">
                     <h1 className="title">Formas de Pagamento</h1>
-                    <hr className="horizontal-line2"/>
+                    <hr className="horizontal-line2" />
                     <div className="cards-container2">
                         <div className="card">
                             <div className='meioCard4'>
                                 <img src={onchain} alt="Programação" className="card-image" />
-                            </div> 
+                            </div>
                             <p className='textT'>OnChain</p>
-                            <p className="titulo6">ETH 000.1</p>
+                            <p className="titulo6">ETH 0.0001</p>
                             <Link onClick={this.connectMetaMaskAndPay}>
                                 <button className='buttonEscolha'>Comprar</button>
                             </Link>
@@ -108,7 +115,7 @@ class Assinatura extends Component {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         )
     }
 };

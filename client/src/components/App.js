@@ -14,6 +14,7 @@ import LoginEmpresa from './LoginEmpresa';
 import CriarContaEmpresa from './Criar-Conta-Empresa';
 import HomeEmpresa from './Home-Empresa';
 import ContaEmpresa from './Conta-Empresa';
+import Iteracao from './Iteracao';
 
 class App extends Component {
     render() {
@@ -34,6 +35,7 @@ class App extends Component {
                     <Route path="/licoes" element={<Lessons />} />
                     <Route path="/assinatura" element={<Assinatura />} />
                     <Route path="/recompensa" element={<Recompensa />} />
+                    <Route path="/Iteracao" element={<Iteracao />} />
                 </Routes>
             </div>
         );

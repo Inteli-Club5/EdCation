@@ -1,6 +1,6 @@
-# Nome - slogan do projeto
+# EdCation3 - Transformando e Facilitando a Web3
 
-[logo]
+![logo](./logo.png)
 
 ## Introdução
 XXXX é uma plataforma criada para alavancar as conexões no mundo profissional web3 e democratizar o acesso ao conhecimento em blockchain e criptoativos. Nela, usuários interessados em aprender sobre web3 recebem conteúdo gratuito e gamificado, ao passo que podem aprimorar sua experiência e entrar no banco de talentos profissionais da plataforma. Por outro lado, empresas e startups que necessitam de talentos qualificados de forma rápida e fácil podem acessar o banco de profissionais da plataforma e criar conexões de trabalho. Qualificando estudantes e aumentando a confiança e rapidez de contratações, planejamos auxiliar e criar novas oportunidades acadêmicas, profissionais e sociais através da Blockchain.

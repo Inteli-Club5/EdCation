@@ -319,7 +319,7 @@ html, body {
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 200px;
+    height: auto;
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2159,4 +2159,76 @@ html, body {
     font-size: 14px;
     margin-top: 1em;
     color: red;
+}
+.track-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vh;
+    height: 60vh;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #2E2E2E, #13131340);
+    border:1px solid rgba(201, 198, 198, 0.497);
+}
+
+.track-card2:hover {
+    transform: scale(1.1);
+}
+
+.track-icon2 {
+    margin: 1em;
+    width: 50%;
+    height: auto;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.track-name2 {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+.buttonComprar{
+    width: 70%;
+    height: 3em;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 1em;
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 1em;
+}
+.titulo7 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fdfdfd;
+    border-radius: 0.5em;
+}
+.RecTok{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.title5 {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 24px;
+    color: #fffefe;
+}
+.tokem{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end; /* Funciona dentro de um flex container */
+    justify-self: flex-end; /* Não tem efeito aqui */
+    margin-top: auto; /* Empurra para o final do contêiner pai */
 }

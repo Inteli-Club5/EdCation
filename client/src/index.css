@@ -2196,6 +2196,7 @@ html, body {
     font-size: 1.5em;
     color: #fdfdfd;
     border-radius: 0.5em;
+    justify-self: center;
 }
 .RecTok{
     display: flex;

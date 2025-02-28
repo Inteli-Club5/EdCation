@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from './images/edcation3.png';
 import profile from './images/profile.png';
 import arbitrum from './images/arbitrumsemfundo.png';
@@ -31,6 +31,7 @@ function Quiz() {
     const [tokens, setTokens] = useState(0); // Estado para os tokens
 
     const question = questions[currentQuestionIndex];
+    const navigate = useNavigate();  // Usando o hook useNavigate
 
     useEffect(() => {
         if (timeLeft > 0) {
@@ -69,7 +70,7 @@ function Quiz() {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
             setTimeLeft(60); // Reseta o tempo para 60 segundos a cada nova pergunta
         } else {
-            alert("Você completou o quiz!");
+            navigate('/recompensa')
         }
     };
 

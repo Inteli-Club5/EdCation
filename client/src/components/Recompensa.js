@@ -15,7 +15,9 @@ const Modal = ({ isOpen, onClose, premio }) => {
                 <img src={premio.imagem} className="track-icon-2" alt={premio.name} />
                 <h2>{premio.name}</h2>
                 <p className='texto'>{premio.resumo}</p>
-                <p className='titulo7'>{premio.SMD}</p>
+                <center>
+                    <p className='titulo7'>{premio.SMD}</p>
+                </center>
                 <button className="buttonComprar">Comprar</button>
                 <button className="close-button" onClick={onClose}>&times;</button>
             </div>
